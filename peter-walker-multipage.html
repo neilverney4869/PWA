@@ -16,18 +16,19 @@
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;font-size:16px;}
-body{font-family:'Byington','Lora',Georgia,serif;color:#0d1b3e;background:#fff;font-size:1rem;line-height:1.75;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{font-family:'Byington','Lora',Georgia,serif;color:#1f3163;background:#CD7FFF;font-size:1rem;line-height:1.75;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 img,video{max-width:100%;display:block;}
 a{text-decoration:none;color:inherit;}
 
 :root{
-  --deep:#0d1b3e;--plum:#14254d;--grape:#1f3163;
-  --mauve:#E0AFFF;--mauve-dark:#cc99ff;--mauve-deep:#b87dff;
-  --muted:#6f6880;--mid:#8b8298;--lilac:#c8b8d8;--lilac-soft:#e0d4ec;--lavender:#efe8f5;--mist:#f8f5fb;
-  --text:#1a2247;--text-light:#5a5468;
-  --gold:#c9a961;--gold-bright:#d8bd7a;--gold-deep:#a8893f;
-  --silver:#b8c0cc;--silver-bright:#d6dce4;--silver-deep:#8d96a6;
-  --accent:#c9a961;--accent-hover:#b0944e;--lilac-bright:#c9a961;
+  --deep:#1f3163;--plum:#1f3163;--grape:#1f3163;
+  --mauve:#CD7FFF;--mauve-dark:#a855f7;--mauve-deep:#b87dff;
+  --muted:#4A5FA3;--mid:#4A5FA3;--lilac:#C8D4F5;--lilac-soft:#dbb8ff;--lavender:#b85fff;--mist:#CD7FFF;
+  --text:#1f3163;--text-light:#4A5FA3;
+  --gold:#EFBF04;--gold-bright:#EFBF04;--gold-deep:#EFBF04;
+  --silver:#C8D4F5;--silver-bright:#dce4f7;--silver-deep:#4A5FA3;
+  --accent:#EFBF04;--accent-hover:#EFBF04;--lilac-bright:#EFBF04;
+  --green-sold:#3D8B6E;--alert-rose:#B85C52;--periwinkle:#C8D4F5;--cornflower:#4A5FA3;
   --font-heading:'Trieste','Cormorant Garamond',Georgia,serif;
   --font-sub:'Proxima Nova','Inter',-apple-system,sans-serif;
   --font-body:'Byington','Lora',Georgia,serif;
@@ -56,7 +57,7 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 @keyframes pageIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
 
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.4rem 0;transition:all 0.4s;background:transparent;}
-.nav.scrolled,.nav.nav-solid{background:rgba(224,175,255,0.97);backdrop-filter:blur(24px);padding:0.8rem 0;box-shadow:0 1px 0 rgba(201,169,97,0.18);}
+.nav.scrolled,.nav.nav-solid{background:rgba(205,127,255,0.97);backdrop-filter:blur(24px);padding:0.8rem 0;box-shadow:0 1px 0 rgba(239,191,4,0.25);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;}
 .nav-logo{display:inline-flex;align-items:center;gap:0.75rem;cursor:pointer;color:#fff;}
 .nav.scrolled .nav-logo,.nav.nav-solid .nav-logo{color:var(--grape);}
@@ -79,10 +80,10 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 .nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
 
 .btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 1.8rem;font-size:0.82rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:100px;cursor:pointer;transition:all 0.3s;}
-.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-deep) 100%);color:#fff;box-shadow:0 4px 24px rgba(201,169,97,0.32);}
-.btn-primary:hover{background:linear-gradient(135deg,var(--gold-bright) 0%,var(--gold) 100%);transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,169,97,0.45);}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-deep) 100%);color:#fff;box-shadow:0 4px 24px rgba(239,191,4,0.32);}
+.btn-primary:hover{background:linear-gradient(135deg,var(--gold-bright) 0%,var(--gold) 100%);transform:translateY(-2px);box-shadow:0 8px 32px rgba(239,191,4,0.45);}
 .btn-outline{background:transparent;color:var(--grape);border:1px solid rgba(31,49,99,0.35);}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold-deep);background:rgba(201,169,97,0.08);}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold-deep);background:rgba(239,191,4,0.08);}
 .btn-outline-dark{background:transparent;color:var(--deep);border:1px solid var(--silver);}
 .btn-outline-dark:hover{border-color:var(--gold);color:var(--gold-deep);}
 .btn-arrow::after{content:'\2192';transition:transform 0.3s;}
@@ -92,18 +93,18 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 .section-label::before{content:'';width:24px;height:1px;background:var(--gold);}
 .section-title{margin-bottom:1.4rem;}
 
-.page-header{background:linear-gradient(160deg,#d49eff 0%,#E0AFFF 40%,#e8c4ff 100%);padding:8rem 0 3.5rem;text-align:center;position:relative;overflow:hidden;min-height:60vh;display:flex;align-items:center;}
+.page-header{background:linear-gradient(160deg,#e5ccff 0%,#f3e8ff 40%,#dbb8ff 100%);padding:8rem 0 3.5rem;text-align:center;position:relative;overflow:hidden;min-height:60vh;display:flex;align-items:center;}
 .page-header>.container{width:100%;}
-.page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(201,169,97,0.10) 0%,transparent 60%);}
+.page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(239,191,4,0.08) 0%,transparent 60%);}
 .page-header .section-label{justify-content:center;color:var(--gold-deep);position:relative;}
 .page-header .section-label::before{background:var(--gold);}
 .page-header h1{color:var(--grape);font-size:clamp(2.4rem,4.5vw,3.8rem);margin-bottom:1rem;position:relative;}
 .page-header p{color:rgba(31,49,99,0.75);max-width:580px;margin:0 auto;position:relative;}
 
 /* HOME */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(160deg,#d49eff 0%,#E0AFFF 30%,#e8c4ff 70%,#efd6ff 100%);overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 30%,rgba(201,169,97,0.18) 0%,transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(184,192,204,0.12) 0%,transparent 50%);}
-.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a961' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#CD7FFF;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 30%,rgba(239,191,4,0.14) 0%,transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(200,212,245,0.18) 0%,transparent 50%);}
+.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23EFBF04' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
 .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;width:100%;}
 .hero-text{max-width:620px;padding-top: 100px;}
 .hero-tagline{font-size:0.78rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:1.8rem;display:flex;align-items:center;gap:1rem;}
@@ -113,13 +114,13 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 .hero-intro{font-family:var(--font-body);font-size:var(--body-size);color:rgba(31,49,99,0.78);line-height:var(--body-line);margin-bottom:2.5rem;max-width:520px;}
 .hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;}
 .hero-image-wrapper{position:relative;display:flex;justify-content:center;align-items:center;}
-.hero-image-frame{width:400px;height:500px;position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(145deg,#cc99ff,#E0AFFF);box-shadow:0 40px 100px rgba(0,0,0,0.2),0 0 0 1px rgba(201,169,97,0.25);}
+.hero-image-frame{width:400px;height:500px;position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(145deg,#a855f7,#CD7FFF);box-shadow:0 40px 100px rgba(31,49,99,0.18),0 0 0 1px rgba(239,191,4,0.25);}
 .hero-photo{width:100%;height:100%;object-fit:cover;object-position:center;}
 .hero-stats{position:relative;z-index:2;margin-top:3rem;display:flex;gap:3rem;}
 .hero-stat-number{font-family:var(--font-heading);font-size:2.6rem;font-weight:500;color:var(--gold);line-height:1;}
 .hero-stat-label{font-size:0.72rem;color:rgba(31,49,99,0.6);text-transform:uppercase;letter-spacing:0.14em;margin-top:0.3rem;font-weight:500;}
 
-.home-cta{background:linear-gradient(180deg,var(--mist) 0%,var(--lavender) 100%);padding:6rem 0;text-align:center;position:relative;min-height:100vh;display:flex;align-items:center;}
+.home-cta{background:linear-gradient(180deg,#CD7FFF 0%,#b85fff 100%);padding:6rem 0;text-align:center;position:relative;min-height:100vh;display:flex;align-items:center;}
 .home-cta-inner{max-width:800px;margin:0 auto;}
 .home-cta .intro-quote{font-family:var(--font-heading);font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:500;font-style:italic;color:var(--deep);line-height:1.45;margin-bottom:1.5rem;}
 .home-cta .intro-quote::before{content:'\201C';color:var(--gold);}
@@ -127,16 +128,16 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 .home-cta-divider{width:64px;height:2px;background:linear-gradient(90deg,transparent,var(--gold) 50%,transparent);margin:0 auto 2rem;border-radius:2px;}
 .home-cta p.desc{max-width:620px;margin:0 auto 3rem;color:var(--mid);}
 .home-cta-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2.5rem;text-align:left;}
-.home-cta-card{background:#fff;border-radius:16px;padding:1.8rem;border:1px solid rgba(224,212,236,0.6);transition:all 0.35s;cursor:pointer;}
-.home-cta-card:hover{border-color:rgba(201,169,97,0.4);box-shadow:0 8px 30px rgba(13,27,62,0.08);transform:translateY(-3px);}
+.home-cta-card{background:rgba(255,255,255,0.88);border-radius:16px;padding:1.8rem;border:1px solid rgba(255,255,255,0.6);transition:all 0.35s;cursor:pointer;}
+.home-cta-card:hover{border-color:rgba(239,191,4,0.5);box-shadow:0 8px 30px rgba(31,49,99,0.12);transform:translateY(-3px);}
 .home-cta-card-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
 .home-cta-card-icon svg{width:20px;height:20px;}
-.home-cta-card-icon--strategy{background:linear-gradient(135deg,rgba(201,169,97,0.18),rgba(201,169,97,0.06));}
+.home-cta-card-icon--strategy{background:linear-gradient(135deg,rgba(239,191,4,0.18),rgba(239,191,4,0.06));}
 .home-cta-card-icon--strategy svg{color:var(--gold-deep);}
-.home-cta-card-icon--approach{background:linear-gradient(135deg,rgba(184,192,204,0.28),rgba(184,192,204,0.08));}
-.home-cta-card-icon--approach svg{color:var(--silver-deep);}
-.home-cta-card-icon--results{background:linear-gradient(135deg,rgba(200,184,216,0.35),rgba(200,184,216,0.1));}
-.home-cta-card-icon--results svg{color:var(--plum);}
+.home-cta-card-icon--approach{background:linear-gradient(135deg,rgba(200,212,245,0.4),rgba(200,212,245,0.12));}
+.home-cta-card-icon--approach svg{color:var(--cornflower);}
+.home-cta-card-icon--results{background:linear-gradient(135deg,rgba(205,127,255,0.35),rgba(205,127,255,0.1));}
+.home-cta-card-icon--results svg{color:var(--grape);}
 .home-cta-card h3{font-size:1.15rem;color:var(--deep);margin-bottom:0.5rem;}
 .home-cta-card p{color:var(--mid);font-size:var(--body-size);}
 .home-cta-card .card-link{display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.9rem;font-size:0.78rem;font-weight:600;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.1em;transition:gap 0.3s;}
@@ -144,32 +145,32 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 .home-cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
 
 /* ABOUT */
-.about-section{padding:5rem 0;background:#fff;}
+.about-section{padding:5rem 0;background:#CD7FFF;}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
 .about-image-area{position:relative;}
-.about-image-box{width:100%;aspect-ratio:4/5;border-radius:16px;background:linear-gradient(145deg,var(--mist),var(--lavender));overflow:hidden;box-shadow:0 20px 60px rgba(13,27,62,0.10);}
+.about-image-box{width:100%;aspect-ratio:4/5;border-radius:16px;background:linear-gradient(145deg,#CD7FFF,#b85fff);overflow:hidden;box-shadow:0 20px 60px rgba(31,49,99,0.15);}
 .about-photo{width:100%;height:100%;object-fit:cover;object-position:center;}
-.about-accent{position:absolute;bottom:-1.5rem;right:-1.5rem;width:160px;padding:1.5rem;background:linear-gradient(145deg,var(--deep),var(--plum));color:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(13,27,62,0.28);text-align:center;border:1px solid rgba(201,169,97,0.25);}
+.about-accent{position:absolute;bottom:-1.5rem;right:-1.5rem;width:160px;padding:1.5rem;background:linear-gradient(145deg,var(--deep),var(--plum));color:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(31,49,99,0.28);text-align:center;border:1px solid rgba(239,191,4,0.25);}
 .about-accent-number{font-family:var(--font-heading);font-size:2.4rem;font-weight:500;color:var(--gold);}
 .about-accent-text{font-family:var(--font-sub);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.65);margin-top:0.2rem;font-weight:500;}
 .about-text p,.about-text .lead{color:var(--text);}
 .about-text .lead{margin-bottom:1.4rem;}
 .about-text p{margin-bottom:1rem;}
-.awards{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--lavender);}
+.awards{margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.4);}
 .awards h4{font-family:var(--font-sub);font-size:0.74rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:1.2rem;}
 .award-list{list-style:none;}
 .award-list li{display:flex;align-items:center;gap:0.8rem;padding:0.5rem 0;font-size:0.95rem;color:var(--text-light);font-weight:400;}
-.award-list li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;box-shadow:0 0 0 3px rgba(201,169,97,0.12);}
+.award-list li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;box-shadow:0 0 0 3px rgba(239,191,4,0.12);}
 
 /* SERVICES */
-.services-section{padding:5rem 0;background:#fff;}
+.services-section{padding:5rem 0;background:#CD7FFF;}
 .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
-.service-card{padding:2rem;border-radius:16px;background:var(--mist);border:1px solid transparent;transition:all 0.4s;position:relative;overflow:hidden;}
+.service-card{padding:2rem;border-radius:16px;background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.6);transition:all 0.4s;position:relative;overflow:hidden;}
 .service-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:linear-gradient(180deg,var(--gold-bright),var(--gold-deep));transition:height 0.4s;border-radius:0 0 2px 0;}
-.service-card:hover{border-color:rgba(201,169,97,0.25);box-shadow:0 10px 40px rgba(13,27,62,0.08);transform:translateY(-3px);}
+.service-card:hover{border-color:rgba(239,191,4,0.35);box-shadow:0 10px 40px rgba(31,49,99,0.08);transform:translateY(-3px);}
 .service-card:hover::before{height:100%;}
 .service-card.full-width{grid-column:1/-1;max-width:600px;margin:0 auto;}
-.svc-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;background:linear-gradient(135deg,rgba(201,169,97,0.16),rgba(184,192,204,0.18));}
+.svc-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;background:linear-gradient(135deg,rgba(239,191,4,0.16),rgba(200,212,245,0.18));}
 .svc-icon svg{width:22px;height:22px;color:var(--gold-deep);}
 .service-card h3{font-size:1.2rem;margin-bottom:0.5rem;color:var(--deep);}
 .service-card>p{color:var(--mid);}
@@ -178,58 +179,58 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 .service-list li::before{content:'';width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:0.55em;}
 
 /* APPROACH */
-.approach-section{padding:5rem 0;background:#fff;}
+.approach-section{padding:5rem 0;background:#CD7FFF;}
 .approach-items{display:flex;flex-direction:column;gap:1.4rem;}
-.approach-item{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2rem;border-radius:16px;background:var(--mist);border:1px solid rgba(224,212,236,0.5);align-items:start;transition:all 0.4s;}
-.approach-item:hover{border-color:rgba(201,169,97,0.3);box-shadow:0 8px 30px rgba(13,27,62,0.08);transform:translateY(-2px);}
+.approach-item{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2rem;border-radius:16px;background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.6);align-items:start;transition:all 0.4s;}
+.approach-item:hover{border-color:rgba(239,191,4,0.3);box-shadow:0 8px 30px rgba(31,49,99,0.08);transform:translateY(-2px);}
 .approach-number{font-family:var(--font-heading);font-size:3rem;font-weight:500;background:linear-gradient(135deg,var(--gold-bright),var(--gold-deep));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1;opacity:0.85;}
 .approach-item h3{font-size:1.3rem;color:var(--deep);margin-bottom:0.5rem;}
 .approach-item h3 span{color:var(--gold-deep);}
 .approach-item p{color:var(--text-light);}
 
 /* MEDIA */
-.media-section{padding:4.5rem 0;background:#fff;}
-.video-feature{max-width:1000px;margin:0 auto 2.5rem;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(13,27,62,0.22);background:#06112c;border:1px solid rgba(201,169,97,0.18);}
+.media-section{padding:4.5rem 0;background:#CD7FFF;}
+.video-feature{max-width:1000px;margin:0 auto 2.5rem;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(31,49,99,0.22);background:#1f3163;border:1px solid rgba(239,191,4,0.18);}
 .video-feature video{width:100%;aspect-ratio:16/9;background:#000;}
-.video-feature-meta{padding:1.25rem 1.6rem;background:linear-gradient(180deg,#06112c,#0d1b3e);display:flex;flex-wrap:wrap;gap:0.8rem;align-items:center;justify-content:space-between;}
+.video-feature-meta{padding:1.25rem 1.6rem;background:linear-gradient(180deg,#1f3163,#2E4A8A);display:flex;flex-wrap:wrap;gap:0.8rem;align-items:center;justify-content:space-between;}
 .video-feature-title{font-family:var(--font-heading);font-size:1.3rem;color:#fff;font-weight:500;line-height:1.3;max-width:70%;}
-.video-feature-tag{font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);padding:0.4rem 0.85rem;border-radius:100px;background:rgba(201,169,97,0.12);border:1px solid rgba(201,169,97,0.32);}
+.video-feature-tag{font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);padding:0.4rem 0.85rem;border-radius:100px;background:rgba(239,191,4,0.12);border:1px solid rgba(239,191,4,0.32);}
 
 /* VIDEO LIST — no thumbnails */
 .video-grid{display:flex;flex-direction:column;gap:0.55rem;max-width:780px;margin:0 auto;}
-.video-tile{background:var(--mist);border-radius:10px;border:1px solid rgba(224,212,236,0.6);cursor:pointer;transition:all 0.25s;}
-.video-tile:hover{border-color:rgba(201,169,97,0.45);background:#fff;box-shadow:0 4px 14px rgba(13,27,62,0.08);transform:translateX(2px);}
-.video-tile.is-active{border-color:var(--gold);background:#fff;box-shadow:0 0 0 2px rgba(201,169,97,0.22);}
+.video-tile{background:rgba(255,255,255,0.85);border-radius:10px;border:1px solid rgba(255,255,255,0.6);cursor:pointer;transition:all 0.25s;}
+.video-tile:hover{border-color:rgba(239,191,4,0.5);background:rgba(255,255,255,0.95);box-shadow:0 4px 14px rgba(31,49,99,0.1);transform:translateX(2px);}
+.video-tile.is-active{border-color:var(--gold);background:#fff;box-shadow:0 0 0 2px rgba(239,191,4,0.22);}
 .video-tile-body{padding:0.85rem 1.1rem;}
 .video-tile-title{font-size:0.95rem;font-weight:600;color:var(--deep);line-height:1.45;}
 .video-tile-num{font-family:var(--font-heading);font-size:1rem;color:var(--gold-deep);font-style:italic;margin-right:0.5rem;}
 
 /* CONTACT */
-.contact-section{padding:5rem 0 6rem;background:#fff;}
+.contact-section{padding:5rem 0 6rem;background:#CD7FFF;}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;}
 .contact-info .lead{margin-bottom:1.8rem;color:var(--mid);}
-.contact-detail{display:flex;align-items:center;gap:1rem;padding:0.8rem 0;border-bottom:1px solid var(--lavender);}
-.contact-detail-icon{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--mist),var(--lavender));display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(201,169,97,0.18);}
+.contact-detail{display:flex;align-items:center;gap:1rem;padding:0.8rem 0;border-bottom:1px solid rgba(255,255,255,0.4);}
+.contact-detail-icon{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.7);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(255,255,255,0.5);}
 .contact-detail-icon svg{width:18px;height:18px;color:var(--gold-deep);}
 .contact-detail-text h4{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:var(--mid);margin-bottom:0.15rem;}
 .contact-detail-text p{font-size:0.98rem;color:var(--deep);font-weight:500;margin:0;}
-.contact-location{margin-top:1.5rem;padding:1.3rem;border-radius:14px;background:linear-gradient(135deg,var(--mist),var(--lavender));border:1px solid rgba(224,212,236,0.6);}
+.contact-location{margin-top:1.5rem;padding:1.3rem;border-radius:14px;background:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.5);}
 .contact-location h4{font-family:var(--font-sub);font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:var(--gold-deep);margin-bottom:0.5rem;}
 .contact-location p{color:var(--text-light);margin:0;}
-.contact-form{background:linear-gradient(160deg,var(--mist),var(--lavender));padding:2.2rem;border-radius:20px;border:1px solid rgba(224,212,236,0.5);box-shadow:0 6px 24px rgba(13,27,62,0.05);}
+.contact-form{background:rgba(255,255,255,0.88);padding:2.2rem;border-radius:20px;border:1px solid rgba(255,255,255,0.6);box-shadow:0 6px 24px rgba(31,49,99,0.08);}
 .contact-form h3{font-size:1.4rem;margin-bottom:0.35rem;color:var(--deep);}
 .contact-form .form-subtitle{color:var(--mid);margin-bottom:1.5rem;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:0.5rem;}
 .form-group{margin-bottom:0.75rem;}
 .form-group label{display:block;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--mid);margin-bottom:0.4rem;}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.78rem 1rem;border:1px solid var(--lilac-soft);border-radius:10px;font-family:var(--font-sub);font-size:0.95rem;color:var(--deep);background:#fff;transition:all 0.3s;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,169,97,0.15);}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.78rem 1rem;border:1px solid rgba(31,49,99,0.15);border-radius:10px;font-family:var(--font-sub);font-size:0.95rem;color:var(--deep);background:#fff;transition:all 0.3s;}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(239,191,4,0.15);}
 .form-group textarea{resize:vertical;min-height:90px;font-family:var(--font-body);}
 .form-submit{margin-top:1rem;}
 .form-submit .btn{width:100%;justify-content:center;}
 
 /* FOOTER */
-.footer{background:linear-gradient(180deg,#E0AFFF,#d49eff);color:rgba(31,49,99,0.6);padding:3rem 0 1.5rem;border-top:1px solid rgba(201,169,97,0.18);}
+.footer{background:linear-gradient(180deg,#b85fff,#a855f7);color:rgba(31,49,99,0.7);padding:3rem 0 1.5rem;border-top:1px solid rgba(239,191,4,0.25);}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
 .footer-brand{font-size:0.82rem;font-weight:600;color:var(--grape);letter-spacing:0.14em;text-transform:uppercase;}
 .footer-brand span{color:var(--gold);}
@@ -260,7 +261,7 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
   .contact-grid{grid-template-columns:1fr;gap:3rem;}
 }
 @media(max-width:768px){
-  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(224,175,255,0.98);flex-direction:column;align-items:center;justify-content:center;gap:2rem;}
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(205,127,255,0.98);flex-direction:column;align-items:center;justify-content:center;gap:2rem;}
   .nav-links.active{display:flex;}
   .nav-links a{font-size:1.05rem;color:var(--grape)!important;}
   .nav-toggle{display:block;}
@@ -301,8 +302,10 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
     <div class="hero-content">
       <div class="hero-text">
         <!-- <div class="hero-tagline">Auctioneering Apex</div> -->
-        <h1>Understanding Auction Strategy<br><em>Results That Exceed Expectations</em></h1>
-        <p class="hero-intro">Four decades of Canberra auction expertise — helping leading agents and vendors achieve premium results through collaborative campaigns.</p>
+        <h1>Understanding Auction Strategy<br>
+        <p></p>
+        <em>Results That Exceed Expectations</em></h1>
+        <p class="hero-intro">Nearly four decades of auction expertise — built on genuine connection, integrity, and a sincere belief that people always come first.</p>
         <div class="hero-buttons">
           <a class="btn btn-outline" onclick="navigateTo('about')">Learn More</a>
         </div>
@@ -322,9 +325,9 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
   <section class="home-cta">
     <div class="container">
       <div class="home-cta-inner">
-        <p class="intro-quote fade-in">Most auctioneers call bids. Peter designs the conditions that create them.</p>
+        <p class="intro-quote fade-in">Relationships are the foundation. Results are the outcome.</p>
         <div class="home-cta-divider"></div>
-        <p class="desc fade-in fade-in-delay-1">Auction day is the control of energy, psychology, and outcome. Peter brings three decades of preparation to every moment that matters.</p>
+        <p class="desc fade-in fade-in-delay-1">Auction day is where experience, psychology and genuine connection converge. Peter brings nearly four decades of craft — and a deep commitment to people — to every moment that matters.</p>
       </div>
       <div class="home-cta-cards">
         <div class="home-cta-card fade-in" onclick="navigateTo('services')">
@@ -359,8 +362,8 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
   <div class="page-header">
     <div class="container">
       <div class="section-label">About</div>
-      <h1>A Career Built on Precision &amp; Empathy</h1>
-      <p>Three decades of Canberra expertise, national recognition, and an unwavering commitment to every auction outcome.</p>
+      <h1>A Career Built on Trust &amp; Genuine Connection</h1>
+      <p>Nearly four decades of experience — grounded in relationships, authenticity, and an unwavering belief that people always come first.</p>
     </div>
   </div>
   <section class="about-section">
@@ -376,10 +379,11 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
           </div>
         </div>
         <div class="about-text fade-in fade-in-delay-1">
-          <h2 class="section-title">Experience Meets Authenticity</h2>
-          <p class="lead">Peter Walker brings 39 years of professionalism, consistency, and proven results to every campaign — with a genuine approach that personalises each auction experience.</p>
-          <p>Deep market knowledge paired with high empathy lets Peter connect with clients while maintaining composure in high-pressure moments — whether guiding first-time sellers or seasoned investors.</p>
-          <p>Outside real estate, Peter spends time with his family, follows the cricket through summer, and supports his sons' sporting pursuits.</p>
+          <h2 class="section-title">Authenticity, Craft &amp; People First</h2>
+          <p class="lead">Since stepping into the real estate industry in 1987, Peter has built a respected career spanning nearly four decades — as both a residential sales agent and part-time auctioneer. Known for his authenticity, professionalism and calm approach, he has earned the trust of buyers and sellers across changing markets and generations of families.</p>
+          <p>Peter's long-standing success is grounded in relationships and a sincere belief that people always come first. He is committed to achieving the best possible outcomes for his clients while leading every interaction with integrity, respect and care.</p>
+          <p>Passionate about continuous learning and refining the craft of auctioneering, Peter combines experience with genuine connection, strong communication and a collaborative style. He has a deep appreciation and understanding of the psychology behind an auction — applying this to performance, communication and decision-making in both auction and competition environments.</p>
+          <p>Peter is known for his strengths-based approach, encouraging others to grow in confidence, refine their craft and perform at their best.</p>
           <div class="awards">
             <h4>Recognition &amp; Awards</h4>
             <ul class="award-list">
@@ -446,25 +450,39 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 <div class="page" id="page-approach">
   <div class="page-header">
     <div class="container">
-      <div class="section-label">Signature Methodology</div>
+      <div class="section-label">Philosophy &amp; Values</div>
       <h1>The Walker Auctions Approach</h1>
-      <p>Three frameworks, refined over three decades — engineered to deliver premium outcomes.</p>
+      <p>Adaptability, collaboration and trust — the values at the heart of nearly four decades in real estate.</p>
     </div>
   </div>
   <section class="approach-section">
     <div class="container">
       <div class="approach-items">
         <div class="approach-item fade-in">
+          <div class="approach-number" style="font-size:2rem;line-height:1.2;">&ldquo;Me.<br>We.&rdquo;</div>
+          <div>
+            <h3>The Shortest Poem. The Deepest Truth.</h3>
+            <p>Muhammad Ali's iconic "Me, We" is often regarded as the shortest poem in the English language. Delivered spontaneously on June 4, 1975, during a lecture at Harvard University, Ali was asked by a student to recite a poem. After a brief pause, he responded with two simple yet powerful words: "Me. We."</p>
+          </div>
+        </div>
+        <div class="approach-item fade-in fade-in-delay-1">
           <div class="approach-number">01</div>
-          <div><h3>The Auction <span>Momentum Curve&trade;</span></h3><p>Energy builds in patterns. Peter reads the rhythm of a room with instinct honed over thousands of auctions — managing pace to sustain tension from the opening bid to the final call.</p></div>
+          <div><h3><span>Adaptability</span></h3><p>After 39 years in the real estate industry, Peter has learned that adaptability allows you to navigate change with confidence — reading shifting markets, evolving buyer behaviour, and the unique dynamics of every auction with clarity and calm.</p></div>
         </div>
         <div class="approach-item fade-in fade-in-delay-1">
           <div class="approach-number">02</div>
-          <div><h3>Buyer <span>Pressure Points&trade;</span></h3><p>The exact moment a bidder is most likely to stretch. Peter identifies the signals that precede commitment, and creates the conditions for buyers to act with confidence.</p></div>
+          <div><h3><span>Collaboration</span></h3><p>Collaboration creates the best outcomes for everyone involved. Peter works closely with agents, vendors and buyers — not as an authority, but as a partner — to ensure every voice is heard and every campaign is built on shared understanding.</p></div>
         </div>
         <div class="approach-item fade-in fade-in-delay-2">
           <div class="approach-number">03</div>
-          <div><h3>The Final <span>5% Strategy&trade;</span></h3><p>Great results are decided in the last few seconds. Peter's composure in these final moments consistently extracts maximum value for vendors.</p></div>
+          <div><h3><span>Trust</span></h3><p>Trust builds strong relationships, and strong relationships build lasting success in sales. It is the foundation of everything Peter does — earned through consistency, honesty, and a genuine belief that people always come first.</p></div>
+        </div>
+        <div class="approach-item fade-in fade-in-delay-2">
+          <div class="approach-number" style="font-size:1.8rem;line-height:1.3;">&ldquo;&mdash;&rdquo;</div>
+          <div>
+            <h3>It's Not About Me. It's About We.</h3>
+            <p>As Muhammad Ali so wisely said, "It's not about me. It's about we." That sentiment perfectly reflects Peter's core values — and the spirit he brings to every auction, every relationship, and every result.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -515,7 +533,7 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
           </div>
           <div class="contact-detail">
             <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
-            <div class="contact-detail-text"><h4>Email</h4><p><a href="mailto:peter@walkerauctions.com">peter@walkerauctions.com</a></p></div>
+            <div class="contact-detail-text"><h4>Email</h4><p><a href="mailto:peter@walkerauctions.com.au">peter@walkerauctions.com.au</a></p></div>
           </div>
           <div class="contact-location"><h4>Location</h4><p>Canberra, ACT</p></div>
         </div>
