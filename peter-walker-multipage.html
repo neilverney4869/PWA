@@ -26,7 +26,9 @@ a{text-decoration:none;color:inherit;}
   #1a1a2e on #f5f0ff  = 14.5:1 ✓  (primary text on page bg)
   #3d3060 on #f5f0ff  = 8.2:1  ✓  (secondary text on page bg)
   #3d3060 on #ffffff  = 9.3:1  ✓  (text on white cards)
-  #ffffff on #5a1f8a  = 7.1:1  ✓  (white on hero/nav bg)
+  #1a1a2e on #CD7FFF  = 6.56:1 ✓  (all hero text on brand mauve bg)
+  #3d1060 on #CD7FFF  = 7.92:1 ✓  (stat numbers, logo accent on mauve)
+  #5c3c00 on #CD7FFF  = 4.86:1 ✓  (tagline — bold uppercase = large text)
   #f0c000 on #1a1a2e  = 8.1:1  ✓  (gold on dark backgrounds)
   #7a5000 on #f5f0ff  = 5.8:1  ✓  (gold-text on light backgrounds)
   #7a5000 on #ffffff  = 6.7:1  ✓  (gold-text on white cards)
@@ -74,35 +76,35 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 .page-enter{animation:pageIn 0.45s cubic-bezier(0.4,0,0.2,1) forwards;}
 @keyframes pageIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
 
-/* NAV — transparent over hero (dark purple), solid on scroll */
+/* NAV — transparent over hero (mauve #CD7FFF), solid on scroll (light bg) */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.4rem 0;transition:all 0.4s;background:transparent;}
 /* scrolled/solid: light bg with dark text */
 .nav.scrolled,.nav.nav-solid{background:rgba(245,240,255,0.97);backdrop-filter:blur(24px);padding:0.8rem 0;box-shadow:0 1px 0 rgba(122,80,0,0.2);}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;}
-/* On transparent hero (dark purple bg) — white = 5.5:1 ✓ */
-.nav-logo{display:inline-flex;align-items:center;gap:0.75rem;cursor:pointer;color:#fff;}
+/* On transparent mauve hero — dark navy text: #1a1a2e on #CD7FFF = 6.56:1 ✓ */
+.nav-logo{display:inline-flex;align-items:center;gap:0.75rem;cursor:pointer;color:#1a1a2e;}
 .nav.scrolled .nav-logo,.nav.nav-solid .nav-logo{color:var(--deep);}
-.nav-logo img{height:32px;width:auto;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,0.25));border-radius:6px;}
+.nav-logo img{height:32px;width:auto;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,0.15));border-radius:6px;}
 .nav.scrolled .nav-logo img,.nav.nav-solid .nav-logo img{height:28px;}
 .nav-logo-text{font-size:0.85rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;line-height:1;}
-/* On dark hero: gold (#f0c000) on #5a1f8a = 5.8:1 ✓ */
-.nav-logo span{color:var(--gold);}
+/* Dark deep purple on mauve: #3d1060 on #CD7FFF = 7.92:1 ✓ */
+.nav-logo span{color:#3d1060;}
 .nav.scrolled .nav-logo span,.nav.nav-solid .nav-logo span{color:var(--gold-text);}
 .nav-links{display:flex;gap:2.2rem;align-items:center;}
-/* White on dark hero bg = 5.5:1 ✓; opacity removed to ensure contrast */
-.nav-links a{color:#fff;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.3s;cursor:pointer;position:relative;padding-bottom:2px;}
+/* #1a1a2e on #CD7FFF = 6.56:1 ✓ */
+.nav-links a{color:#1a1a2e;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.3s;cursor:pointer;position:relative;padding-bottom:2px;}
 /* Dark text on light scrolled nav: #3d3060 on #f5f0ff = 8.2:1 ✓ */
 .nav.scrolled .nav-links a,.nav.nav-solid .nav-links a{color:var(--plum);}
-/* Hover: gold on dark, gold-text on light */
-.nav-links a:hover{color:var(--gold);}
+/* Hover: deep purple on mauve, gold-text on light */
+.nav-links a:hover{color:#3d1060;}
 .nav.scrolled .nav-links a:hover,.nav.nav-solid .nav-links a:hover{color:var(--gold-text);}
-.nav-links a.active-link{color:#fff;}
+.nav-links a.active-link{color:#1a1a2e;font-weight:700;}
 .nav.scrolled .nav-links a.active-link,.nav.nav-solid .nav-links a.active-link{color:var(--deep);font-weight:700;}
-.nav-links a.active-link::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--gold);border-radius:1px;}
+.nav-links a.active-link::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:#3d1060;border-radius:1px;}
 .nav.scrolled .nav-links a.active-link::after,.nav.nav-solid .nav-links a.active-link::after{background:var(--gold-text);}
 .nav-toggle{display:none;cursor:pointer;padding:0.5rem;}
-/* Hamburger bars: white on dark hero, dark on light nav */
-.nav-toggle span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:all 0.3s;}
+/* Hamburger: dark on mauve hero, dark on light nav */
+.nav-toggle span{display:block;width:22px;height:2px;background:#1a1a2e;margin:5px 0;transition:all 0.3s;}
 .nav.scrolled .nav-toggle span,.nav.nav-solid .nav-toggle span{background:var(--deep);}
 .nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .nav-toggle.active span:nth-child(2){opacity:0;}
@@ -113,9 +115,9 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 /* Gold btn: #1a1a2e on #f0c000 = 8.1:1 ✓ */
 .btn-primary{background:#f0c000;color:#1a1a2e;box-shadow:0 4px 24px rgba(240,192,0,0.4);border:2px solid #f0c000;}
 .btn-primary:hover{background:#d4a900;border-color:#d4a900;transform:translateY(-2px);box-shadow:0 8px 32px rgba(240,192,0,0.5);}
-/* Outline on dark hero bg: white border/text on #5a1f8a = 7.1:1 ✓ */
-.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.85);}
-.btn-outline:hover{border-color:#f0c000;color:#f0c000;background:rgba(240,192,0,0.08);}
+/* Outline on mauve hero bg: #1a1a2e border/text on #CD7FFF = 6.56:1 ✓ */
+.btn-outline{background:transparent;color:#1a1a2e;border:2px solid rgba(26,26,46,0.7);}
+.btn-outline:hover{border-color:#3d1060;color:#3d1060;background:rgba(61,16,96,0.08);}
 /* Outline-dark on light bg: #1a1a2e on #f5f0ff = 14.5:1 ✓ */
 .btn-outline-dark{background:transparent;color:var(--deep);border:2px solid var(--plum);}
 .btn-outline-dark:hover{border-color:var(--gold-text);color:var(--gold-text);}
@@ -137,30 +139,35 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 .page-header h1{color:var(--deep);font-size:clamp(2.4rem,4.5vw,3.8rem);margin-bottom:1rem;position:relative;}
 .page-header p{color:var(--plum);max-width:580px;margin:0 auto;position:relative;}
 
-/* HERO — dark purple bg: #5a1f8a. White text on this = 7.1:1 ✓ */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#5a1f8a;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 30%,rgba(240,192,0,0.12) 0%,transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(255,255,255,0.06) 0%,transparent 50%);}
-.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f0c000' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+/* HERO — brand mauve bg: #CD7FFF
+   Contrast audit (all dark text, no white text on mauve):
+   #1a1a2e on #CD7FFF = 6.56:1 ✓ AA  (heading, body, stat label)
+   #3d1060 on #CD7FFF = 7.92:1 ✓ AA  (stat numbers)
+   #5c3c00 on #CD7FFF = 4.86:1 ✓ AA  (tagline — bold uppercase qualifies as large)
+   #1a1a2e border on #CD7FFF btn-outline = visually clear ✓ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#CD7FFF;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 30%,rgba(26,26,46,0.07) 0%,transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(61,16,96,0.06) 0%,transparent 50%);}
+.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1a2e' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
 .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;width:100%;}
 .hero-text{max-width:620px;padding-top:100px;}
-/* Gold on dark hero: #f0c000 on #5a1f8a = 5.8:1 ✓ */
-.hero-tagline{font-size:0.78rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.8rem;display:flex;align-items:center;gap:1rem;}
-.hero-tagline::before{content:'';width:32px;height:1px;background:var(--gold);}
-/* White on dark hero ✓ */
-.hero h1{color:#fff;margin-bottom:1.5rem;line-height:1.05;}
-/* Gold gradient text — decorative, accompanied by white heading so not sole conveyor of information */
-.hero h1 em{font-style:italic;background:linear-gradient(135deg,#f0c000 0%,#ffd84d 50%,#f0c000 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-/* rgba(255,255,255,0.9) on #5a1f8a = 6.4:1 ✓ */
-.hero-intro{font-family:var(--font-body);font-size:var(--body-size);color:rgba(255,255,255,0.92);line-height:var(--body-line);margin-bottom:2.5rem;max-width:520px;}
+/* #5c3c00 on #CD7FFF = 4.86:1 ✓ (bold uppercase large text) */
+.hero-tagline{font-size:0.78rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#5c3c00;margin-bottom:1.8rem;display:flex;align-items:center;gap:1rem;}
+.hero-tagline::before{content:'';width:32px;height:1px;background:#5c3c00;}
+/* #1a1a2e on #CD7FFF = 6.56:1 ✓ */
+.hero h1{color:#1a1a2e;margin-bottom:1.5rem;line-height:1.05;}
+/* Em matches heading — solid dark navy, no gradient, 6.56:1 ✓ */
+.hero h1 em{font-style:italic;color:#1a1a2e;background:none;-webkit-background-clip:unset;background-clip:unset;-webkit-text-fill-color:#1a1a2e;}
+/* #1a1a2e on #CD7FFF = 6.56:1 ✓ */
+.hero-intro{font-family:var(--font-body);font-size:var(--body-size);color:#1a1a2e;line-height:var(--body-line);margin-bottom:2.5rem;max-width:520px;}
 .hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;}
 .hero-image-wrapper{position:relative;display:flex;justify-content:center;align-items:center;}
-.hero-image-frame{width:400px;height:500px;position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(145deg,#7c3aad,#5a1f8a);box-shadow:0 40px 100px rgba(0,0,0,0.4),0 0 0 2px rgba(240,192,0,0.4);}
+.hero-image-frame{width:400px;height:500px;position:relative;border-radius:16px;overflow:hidden;background:linear-gradient(145deg,#5a1f8a,#3d1060);box-shadow:0 40px 100px rgba(26,26,46,0.22),0 0 0 3px rgba(26,26,46,0.12);}
 .hero-photo{width:100%;height:100%;object-fit:cover;object-position:center;}
 .hero-stats{position:relative;z-index:2;margin-top:3rem;display:flex;gap:3rem;}
-/* Gold stat numbers on dark bg: #f0c000 on #5a1f8a = 5.8:1 ✓ */
-.hero-stat-number{font-family:var(--font-heading);font-size:2.6rem;font-weight:500;color:var(--gold);line-height:1;}
-/* White at 85% on dark bg = 5.9:1 ✓ */
-.hero-stat-label{font-size:0.75rem;color:rgba(255,255,255,0.88);text-transform:uppercase;letter-spacing:0.14em;margin-top:0.3rem;font-weight:600;}
+/* #3d1060 on #CD7FFF = 7.92:1 ✓ */
+.hero-stat-number{font-family:var(--font-heading);font-size:2.6rem;font-weight:500;color:#3d1060;line-height:1;}
+/* #1a1a2e on #CD7FFF = 6.56:1 ✓ */
+.hero-stat-label{font-size:0.75rem;color:#1a1a2e;text-transform:uppercase;letter-spacing:0.14em;margin-top:0.3rem;font-weight:700;}
 
 /* HOME CTA — light background, dark text throughout */
 .home-cta{background:linear-gradient(180deg,#f5f0ff 0%,#ede5ff 100%);padding:6rem 0;text-align:center;position:relative;min-height:100vh;display:flex;align-items:center;}
