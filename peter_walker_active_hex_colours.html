@@ -1,0 +1,106 @@
+
+<style>
+.pal{padding:1rem 0;}
+.group{margin-bottom:1.75rem;}
+.group-title{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--color-text-secondary);margin:0 0 10px;}
+.swatches{display:flex;flex-wrap:wrap;gap:10px;}
+.swatch{display:flex;align-items:center;gap:10px;background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:9px 13px;min-width:200px;flex:1;}
+.dot{width:34px;height:34px;border-radius:var(--border-radius-md);flex-shrink:0;border:.5px solid var(--color-border-secondary);}
+.hex{font-size:13px;font-weight:500;color:var(--color-text-primary);font-family:var(--font-mono);letter-spacing:.04em;}
+.label{font-size:12px;color:var(--color-text-secondary);margin-top:2px;}
+.uses{font-size:11px;color:var(--color-text-tertiary);margin-top:3px;}
+.divider{height:.5px;background:var(--color-border-tertiary);margin:1.25rem 0;}
+</style>
+<div class="pal">
+<h2 class="sr-only">Peter Walker website active hex colour palette</h2>
+
+<div class="group">
+  <div class="group-title">Primary — charcoal dark surfaces</div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="dot" style="background:#2b2b2b;"></div>
+      <div><div class="hex">#2b2b2b</div><div class="label">Charcoal — hero, footer, nav bg, image frames</div><div class="uses">--charcoal · --deep · --grape · --text</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#1a1a1a;"></div>
+      <div><div class="hex">#1a1a1a</div><div class="label">Video meta gradient dark end</div><div class="uses">Hardcoded</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#1a1008;"></div>
+      <div><div class="hex">#1a1008</div><div class="label">Hero fallback bg (behind balloon image)</div><div class="uses">Hardcoded</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-title">Accent — mauve</div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="dot" style="background:#b990d9;"></div>
+      <div><div class="hex">#b990d9</div><div class="label">Mauve — stat numbers, bullets, nav active, borders, footer accent</div><div class="uses">--mauve · --gold · --gold-bright</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#9b6cc4;"></div>
+      <div><div class="hex">#9b6cc4</div><div class="label">Mauve dark — hover states</div><div class="uses">--mauve-dark</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-title">Accent — mulberry</div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="dot" style="background:#7b2d5e;"></div>
+      <div><div class="hex">#7b2d5e</div><div class="label">Mulberry — primary buttons, section labels, card links, icons</div><div class="uses">--mulberry · --gold-deep</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#5e2247;"></div>
+      <div><div class="hex">#5e2247</div><div class="label">Mulberry dark — hover states</div><div class="uses">--mulberry-dark</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-title">Text &amp; mid tones</div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="dot" style="background:#444444;"></div>
+      <div><div class="hex">#444444</div><div class="label">Mid grey — body copy, card text, form labels</div><div class="uses">--charcoal-mid · --plum · --mid · --text-light</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#666666;"></div>
+      <div><div class="hex">#666666</div><div class="label">Muted grey — secondary labels</div><div class="uses">--charcoal-muted · --muted</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#cccccc;"></div>
+      <div><div class="hex">#cccccc</div><div class="label">Light grey text — stat labels on dark, footer copy</div><div class="uses">Hardcoded</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-title">White &amp; light surfaces</div>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="dot" style="background:#ffffff;border:.5px solid var(--color-border-secondary);"></div>
+      <div><div class="hex">#ffffff</div><div class="label">White — section bgs, cards, form inputs, hero text</div><div class="uses">--white · 19 active uses</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#f8f8f8;border:.5px solid var(--color-border-secondary);"></div>
+      <div><div class="hex">#f8f8f8</div><div class="label">Off-white — card backgrounds, approach/about sections</div><div class="uses">--off-white</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#eeeeee;border:.5px solid var(--color-border-secondary);"></div>
+      <div><div class="hex">#eeeeee</div><div class="label">Light grey — borders, dividers, card outlines</div><div class="uses">--light-grey</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#f0e8ff;border:.5px solid var(--color-border-secondary);"></div>
+      <div><div class="hex">#f0e8ff</div><div class="label">Soft lavender — hero intro text on dark overlay</div><div class="uses">Hardcoded</div></div>
+    </div>
+    <div class="swatch">
+      <div class="dot" style="background:#000000;"></div>
+      <div><div class="hex">#000000</div><div class="label">Black — video player background</div><div class="uses">Hardcoded</div></div>
+    </div>
+  </div>
+</div>
+</div>
