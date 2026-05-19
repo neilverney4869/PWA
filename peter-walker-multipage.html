@@ -24,8 +24,8 @@
   ║  --navy      #0c1a35  Deep navy — footers, headers, video    ║
   ║                                                               ║
   ║  GOLD (precision accent)                                      ║
-  ║  --gold      #a070cc  Gold — buttons (navy text), display    ║
-  ║  --gold-mid  #8a5ab8  Gold mid — hover states                ║
+  ║  --gold      #f0c060  Gold — buttons (navy text), display    ║
+  ║  --gold-mid  #e8b84b  Gold mid — hover states                ║
   ║                                                               ║
   ║  VERIFIED TEXT PAIRINGS:                                      ║
   ║  #ffffff   on #7b4fa6   = 5.98:1 ✓  white on mauve bg       ║
@@ -34,16 +34,16 @@
   ║  #7b4fa6   on #f8f5ff   = 5.55:1 ✓  mauve on cream card     ║
   ║  #ffffff   on #0c1a35   = 17.29:1 ✓ white on navy           ║
   ║  #b990d9   on #0c1a35   = 6.63:1 ✓  lt mauve on navy        ║
-  ║  #a070cc   on #0c1a35   = 10.22:1 ✓ gold on navy            ║
-  ║  #0c1a35   on #a070cc   = 10.22:1 ✓ navy text on gold btn   ║
+  ║  #f0c060   on #0c1a35   = 10.22:1 ✓ gold on navy            ║
+  ║  #0c1a35   on #f0c060   = 10.22:1 ✓ navy text on gold btn   ║
   ║  #0c1a35   on #ffffff   = 17.29:1 ✓ navy body on white      ║
   ║  #0c1a35   on #f8f5ff   = 16.05:1 ✓ navy on card            ║
   ║  #444444   on #ffffff   = 9.74:1 ✓  mid body on white       ║
   ║  #ffffff   on overlay   = 18.93:1 ✓ hero text               ║
   ║  #b990d9   on overlay   = 7.26:1 ✓  mauve on hero           ║
-  ║  #a070cc   on overlay   = 11.19:1 ✓ gold on hero            ║
+  ║  #f0c060   on overlay   = 11.19:1 ✓ gold on hero            ║
   ║                                                               ║
-  ║  RULE: Gold #a070cc is ONLY used as:                         ║
+  ║  RULE: Gold #f0c060 is ONLY used as:                         ║
   ║    1) Button background (navy text on top = 10.22:1 ✓)       ║
   ║    2) Display text on navy/dark (10.22:1 ✓)                  ║
   ║    3) Decorative borders/rules (no WCAG text requirement)     ║
@@ -77,8 +77,8 @@ a{text-decoration:none;color:inherit;}
   --mauve-deep:#5c3480;
   --navy:     #0c1a35;
   --navy-mid: #162544;
-  --gold:     #a070cc;
-  --gold-mid: #8a5ab8;
+  --gold:     #f0c060;
+  --gold-mid: #e8b84b;
   --white:    #ffffff;
   --cream:    #fff8e8;
   --off-white:#f8f5ff;
@@ -147,14 +147,14 @@ p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body
 
 /* ═══════════════════════════════════════════════
    BUTTONS
-   Gold btn: navy on #a070cc = 10.22:1 ✓
+   Gold btn: navy on #f0c060 = 10.22:1 ✓
    Mauve btn: white on #7b4fa6 = 5.98:1 ✓
    Ghost: white border on dark = visible ✓
    Ghost-light: mauve border/text on white = 5.98:1 ✓
 ═══════════════════════════════════════════════ */
 .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 2rem;font-family:'Jost',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:1.5px solid transparent;border-radius:1px;cursor:pointer;transition:all .28s;}
 .btn-gold{background:var(--gold);color:var(--navy);border-color:var(--gold);}
-.btn-gold:hover{background:var(--gold-mid);border-color:var(--gold-mid);transform:translateY(-2px);box-shadow:0 10px 28px rgba(160,112,204,.35);}
+.btn-gold:hover{background:var(--gold-mid);border-color:var(--gold-mid);transform:translateY(-2px);box-shadow:0 10px 28px rgba(240,192,96,.35);}
 .btn-mauve{background:var(--mauve);color:#ffffff;border-color:var(--mauve);}
 .btn-mauve:hover{background:var(--mauve-deep);border-color:var(--mauve-deep);transform:translateY(-2px);box-shadow:0 10px 28px rgba(123,79,166,.35);}
 .btn-ghost{background:transparent;color:#ffffff;border-color:rgba(255,255,255,.55);}
@@ -187,7 +187,7 @@ p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body
 /* Radial mauve glow top-right — decorative */
 .page-header::before{content:'';position:absolute;top:-80px;right:-80px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(155,108,196,.18) 0%,transparent 68%);}
 /* Gold rule at very bottom */
-.page-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold) 0%,rgba(160,112,204,0) 60%);}
+.page-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold) 0%,rgba(240,192,96,0) 60%);}
 .page-header h1{color:#ffffff;font-size:clamp(2.4rem,4.5vw,3.8rem);margin-bottom:.9rem;}
 .page-header p{color:rgba(255,255,255,.78);max-width:540px;font-size:1.05rem;font-weight:300;}
 
@@ -197,9 +197,9 @@ p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body
    Heavy left overlay preserves text contrast
 ═══════════════════════════════════════════════ */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#120a03;overflow:hidden;}
-.hero-bg:position:absoluteinset:background-image>:urlbackground image/IMG_Canberra-Balloon-Festival1.jpeg background-size,coverbackground-position:center
+.hero-bg{position:absolute;inset:0;background-image:url('IMG_Canberra-Balloon-Festival2.jpeg');background-size:cover;background-position:center 32%;}
 /* Left panel dark, right slightly lighter — directional gradient */
-.hero-bg:after{content:'';position:absolute;inset:0;background:linear-gradient(108deg,rgba(5,8,18,.88) 0%,rgba(5,8,18,.72) 42%,rgba(5,8,18,.48) 68%,rgba(5,8,18,.62) 100%);}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(108deg,rgba(5,8,18,.88) 0%,rgba(5,8,18,.72) 42%,rgba(5,8,18,.48) 68%,rgba(5,8,18,.62) 100%);}
 .hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center;width:100%;}
 .hero-text{padding-top:96px;}
 
@@ -224,7 +224,7 @@ p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body
 /* Navy bg circle: white text = 17.29:1 ✓ | mauve-lt = 6.63:1 ✓ | gold = 10.22:1 ✓ */
 .hero-circle{width:410px;height:410px;border-radius:50%;background:rgba(12,26,53,.82);backdrop-filter:blur(8px);border:1.5px solid rgba(185,144,217,.5);box-shadow:0 0 0 8px rgba(123,79,166,.1),0 0 0 18px rgba(123,79,166,.04),0 40px 100px rgba(0,0,0,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2.8rem;position:relative;}
 /* Gold inner ring — decorative */
-.hero-circle::before{content:'';position:absolute;inset:12px;border-radius:50%;border:1px solid rgba(160,112,204,.22);}
+.hero-circle::before{content:'';position:absolute;inset:12px;border-radius:50%;border:1px solid rgba(240,192,96,.22);}
 .circ-tag{font-family:'Jost',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--mauve-lt);margin-bottom:.9rem;display:flex;align-items:center;gap:.45rem;}
 .circ-tag::before,.circ-tag::after{content:'';flex:1;height:1px;background:rgba(185,144,217,.3);}
 /* White on navy-circle = 17.29:1 ✓ */
@@ -276,7 +276,7 @@ p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body
    Mauve overlay so brand colour is dominant
 ═══════════════════════════════════════════════ */
 .about-visual{position:relative;min-height:46vh;overflow:hidden;}
-.about-vis-bg{position:absolute;inset:0;background-image:url(/images/IMG_Canberra-Balloon-Festival2.jpg;);background-size:cover;background-position:center 48%;}
+.about-vis-bg{position:absolute;inset:0;background-image:url('IMG_Canberra-Balloon-Festival2.jpg');background-size:cover;background-position:center 48%;}
 /* Mauve-over overlay — brand colour dominant, still allows white text */
 .about-vis-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(91,52,128,.88) 0%,rgba(12,26,53,.82) 100%);}
 .about-vis-inner{position:relative;z-index:2;padding:4.5rem 0 4rem;}
@@ -392,7 +392,7 @@ p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body
 .video-tile{background:var(--off-white);border-radius:2px;border:1px solid var(--warm-rule);cursor:pointer;transition:all .22s;}
 .video-tile:hover{border-color:var(--mauve);background:#ffffff;box-shadow:0 4px 16px rgba(123,79,166,.12);transform:translateX(3px);}
 /* Gold active border */
-.video-tile.is-active{border-color:var(--gold);background:#ffffff;box-shadow:0 0 0 2px rgba(160,112,204,.3);}
+.video-tile.is-active{border-color:var(--gold);background:#ffffff;box-shadow:0 0 0 2px rgba(240,192,96,.3);}
 .video-tile-body{padding:.78rem 1.1rem;}
 /* Navy on off-white = 16.05:1 ✓ */
 .video-tile-title{font-size:.87rem;font-weight:400;color:var(--navy);line-height:1.45;}
