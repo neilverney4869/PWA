@@ -1,0 +1,109 @@
+
+<style>
+.card{background:var(--color-background-primary);border:2px solid #7b4fa6;border-radius:var(--border-radius-lg);overflow:hidden;max-width:700px;}
+.bar{height:10px;background:linear-gradient(90deg,#7b4fa6 0%,#a070cc 40%,#0c1a35 70%,#a070cc 100%);}
+.body{padding:1.25rem 1.5rem;}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:0.5rem;}
+.vnum{font-size:11px;font-weight:500;color:var(--color-text-tertiary);letter-spacing:.1em;}
+.vtitle{font-size:16px;font-weight:500;color:var(--color-text-primary);flex:1;line-height:1.25;}
+.badge{font-size:10px;font-weight:600;background:#a070cc;color:#0c1a35;padding:2px 9px;border-radius:3px;letter-spacing:.08em;}
+.desc{font-size:13px;color:var(--color-text-secondary);margin-bottom:1rem;line-height:1.65;}
+.key-change{font-size:12px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:8px 12px;margin-bottom:1rem;color:var(--color-text-secondary);line-height:1.6;}
+.key-change b{color:var(--color-text-primary);}
+.lbl{font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--color-text-tertiary);margin-bottom:7px;margin-top:1rem;}
+.swatches{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:.25rem;}
+.sw{display:inline-flex;align-items:center;gap:5px;padding:3px 8px 3px 4px;border-radius:var(--border-radius-md);background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);}
+.dot{width:13px;height:13px;border-radius:50%;flex-shrink:0;border:0.5px solid rgba(0,0,0,.08);}
+.sw span{font-size:11px;color:var(--color-text-secondary);font-family:var(--font-mono);}
+.sw small{font-size:10px;color:var(--color-text-tertiary);margin-left:2px;}
+.sw.changed{border-color:rgba(160,112,204,.5);background:rgba(160,112,204,.06);}
+.sw.changed span{color:var(--color-text-primary);}
+.fp{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:.5rem;}
+.fpill{font-size:11px;padding:3px 9px;border-radius:var(--border-radius-md);background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary);}
+.fpill b{color:var(--color-text-primary);font-weight:500;}
+.wcag{display:flex;flex-wrap:wrap;gap:5px;}
+.wp{font-size:10px;padding:2px 7px;border-radius:var(--border-radius-md);background:rgba(16,110,66,.08);color:#0a6e42;border:0.5px solid rgba(16,110,66,.2);}
+.wp.new{background:rgba(160,112,204,.12);color:#5c3480;border-color:rgba(160,112,204,.35);}
+.divider{height:0.5px;background:var(--color-border-tertiary);margin:.85rem 0;}
+.foot{padding:.65rem 1.5rem;border-top:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary);display:flex;justify-content:space-between;align-items:center;}
+.fmeta{font-size:11px;color:var(--color-text-tertiary);}
+</style>
+
+<div class="card">
+  <div class="bar"></div>
+  <div class="body">
+
+    <div class="top">
+      <span class="vnum">V7</span>
+      <span class="vtitle">Mauve Dominant · Navy · Mauve-Mid Precision Accent</span>
+      <span class="badge">Current</span>
+    </div>
+    <p class="desc">Test iteration on V6. The gold precision accent <span style="font-family:var(--font-mono);font-size:11px;">#f0c060</span> replaced throughout with mauve-mid <span style="font-family:var(--font-mono);font-size:11px;">#a070cc</span> — creating a fully unified mauve family with no gold contrast. <span style="font-family:var(--font-mono);font-size:11px;">#9b6cc4</span> was requested but failed WCAG AA by a margin (4.39:1 vs 4.5:1 required); nearest safe variant <span style="font-family:var(--font-mono);font-size:11px;">#a070cc</span> used at 4.68:1.</p>
+
+    <div class="key-change">
+      <b>What changed from V6 →</b> <span style="font-family:var(--font-mono);font-size:11px;color:var(--color-text-tertiary);">#f0c060</span> gold → <span style="font-family:var(--font-mono);font-size:11px;">#a070cc</span> mauve-mid &nbsp;·&nbsp; <span style="font-family:var(--font-mono);font-size:11px);color:var(--color-text-tertiary);">#e8b84b</span> gold-hover → <span style="font-family:var(--font-mono);font-size:11px;">#8a5ab8</span> mauve-hover &nbsp;·&nbsp; All other colours unchanged
+    </div>
+
+    <div class="lbl">Mauve family</div>
+    <div class="swatches">
+      <div class="sw"><div class="dot" style="background:#7b4fa6;"></div><span>#7b4fa6</span><small>mauve — primary</small></div>
+      <div class="sw"><div class="dot" style="background:#9b6cc4;"></div><span>#9b6cc4</span><small>mauve-mid (var only)</small></div>
+      <div class="sw changed"><div class="dot" style="background:#a070cc;border:1px solid #7b4fa6;"></div><span>#a070cc</span><small>accent — was gold ★</small></div>
+      <div class="sw changed"><div class="dot" style="background:#8a5ab8;border:1px solid #7b4fa6;"></div><span>#8a5ab8</span><small>accent hover ★</small></div>
+      <div class="sw"><div class="dot" style="background:#b990d9;"></div><span>#b990d9</span><small>mauve-lt (on dark)</small></div>
+      <div class="sw"><div class="dot" style="background:#5c3480;"></div><span>#5c3480</span><small>mauve-deep (hover)</small></div>
+      <div class="sw"><div class="dot" style="background:#f8f5ff;border:0.5px solid #ddd;"></div><span>#f8f5ff</span><small>mauve-tint bg</small></div>
+    </div>
+
+    <div class="lbl">Navy</div>
+    <div class="swatches">
+      <div class="sw"><div class="dot" style="background:#0c1a35;"></div><span>#0c1a35</span><small>navy — authority</small></div>
+      <div class="sw"><div class="dot" style="background:#162544;"></div><span>#162544</span><small>navy-mid</small></div>
+      <div class="sw"><div class="dot" style="background:#120a03;"></div><span>#120a03</span><small>hero bg fallback</small></div>
+    </div>
+
+    <div class="lbl">Neutrals</div>
+    <div class="swatches">
+      <div class="sw"><div class="dot" style="background:#ffffff;border:0.5px solid #ccc;"></div><span>#ffffff</span><small>sections / cards</small></div>
+      <div class="sw"><div class="dot" style="background:#fff8e8;border:0.5px solid #ccc;"></div><span>#fff8e8</span><small>cream (text on mauve)</small></div>
+      <div class="sw"><div class="dot" style="background:#e8e0f0;border:0.5px solid #ccc;"></div><span>#e8e0f0</span><small>warm rule / borders</small></div>
+      <div class="sw"><div class="dot" style="background:#444444;"></div><span>#444444</span><small>body grey</small></div>
+      <div class="sw"><div class="dot" style="background:#bbbbbb;"></div><span>#bbbbbb</span><small>stat labels on hero</small></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="lbl">Fonts</div>
+    <div class="fp">
+      <div class="fpill"><b>Cormorant Garamond</b> · h1, h2, blockquotes, stats, taglines · 13 uses</div>
+      <div class="fpill"><b>Jost</b> · body, UI, nav, buttons, labels, captions · 19 uses</div>
+    </div>
+
+    <div class="lbl">WCAG 2.1 AA — all text pairings verified</div>
+    <div class="wcag">
+      <span class="wp new">#a070cc on navy = 4.68:1 ✓</span>
+      <span class="wp new">navy on #a070cc = 4.68:1 ✓</span>
+      <span class="wp new">#a070cc on overlay = 5.31:1 ✓</span>
+      <span class="wp">#7b4fa6 on white = 5.98:1 ✓</span>
+      <span class="wp">#7b4fa6 on #f8f5ff = 5.55:1 ✓</span>
+      <span class="wp">white on #7b4fa6 = 5.98:1 ✓</span>
+      <span class="wp">#fff8e8 on #7b4fa6 = 5.65:1 ✓</span>
+      <span class="wp">white on navy = 17.29:1 ✓</span>
+      <span class="wp">#b990d9 on navy = 6.63:1 ✓</span>
+      <span class="wp">navy on white = 17.29:1 ✓</span>
+      <span class="wp">navy on #f8f5ff = 16.05:1 ✓</span>
+      <span class="wp">#444 on white = 9.74:1 ✓</span>
+      <span class="wp">#444 on #f8f5ff = 9.04:1 ✓</span>
+      <span class="wp">white on overlay = 19.62:1 ✓</span>
+    </div>
+
+    <div style="margin-top:.85rem;font-size:11px;color:var(--color-text-tertiary);line-height:1.6;">
+      <b style="color:var(--color-text-secondary);">Note:</b> #8a5ab8 (accent hover) is decorative only — used on button/element hover states, never as standalone text. No WCAG text-contrast requirement applies.
+    </div>
+
+  </div>
+  <div class="foot">
+    <span class="fmeta">71 KB · Cormorant Garamond + Jost · 36 videos · WCAG 2.1 AA · 2-panel pages</span>
+    <span class="fmeta">peter-walker-multipage.html</span>
+  </div>
+</div>
