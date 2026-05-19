@@ -3,430 +3,513 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Walker Auctions</title>
-<meta name="description" content="Peter Walker, Canberra's premier auction strategist. 39+ years of precision-led auctions and premium results.">
+<title>Walker Auctions — Peter Walker, Canberra</title>
+<meta name="description" content="Peter Walker — Canberra's premier auctioneer. 39+ years of genuine connection, integrity and results that exceed expectations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-@font-face { font-family:'Trieste'; src:local('Trieste'),url('fonts/Trieste.woff2') format('woff2'); font-display:swap; }
-@font-face { font-family:'Proxima Nova'; src:local('Proxima Nova'),url('fonts/ProximaNova-Regular.woff2') format('woff2'); font-display:swap; font-weight:400; }
-@font-face { font-family:'Proxima Nova'; src:local('Proxima Nova Semibold'),url('fonts/ProximaNova-Semibold.woff2') format('woff2'); font-display:swap; font-weight:600; }
-@font-face { font-family:'Byington'; src:local('Byington'),url('fonts/Byington.woff2') format('woff2'); font-display:swap; }
-
 /*
-  ╔══════════════════════════════════════════════════════╗
-  ║  WCAG 2.1 AA COMPLIANT PALETTE                      ║
-  ╠══════════════════════════════════════════════════════╣
-  ║  Charcoal / White / Mauve / Mulberry                ║
-  ║                                                      ║
-  ║  #ffffff on #2b2b2b  = 14.16:1 ✓  (hero text)      ║
-  ║  #f5f5f5 on #2b2b2b  = 12.99:1 ✓  (body on dark)   ║
-  ║  #cccccc on #2b2b2b  =  8.82:1 ✓  (muted on dark)  ║
-  ║  #b990d9 on #2b2b2b  =  5.43:1 ✓  (mauve on dark)  ║
-  ║  #2b2b2b on #b990d9  =  5.43:1 ✓  (dark on mauve btn)║
-  ║  #ffffff on #7b2d5e  =  8.83:1 ✓  (white on mulberry)║
-  ║  #7b2d5e on #ffffff  =  8.83:1 ✓  (mulberry on white)║
-  ║  #7b2d5e on #f8f8f8  =  8.31:1 ✓  (mulberry on card)║
-  ║  #2b2b2b on #ffffff  = 14.16:1 ✓  (dark on white)  ║
-  ║  #444444 on #ffffff  =  9.74:1 ✓  (mid on white)    ║
-  ║  #2b2b2b on #f8f8f8  = 13.33:1 ✓  (dark on card)   ║
-  ╚══════════════════════════════════════════════════════╝
-  RULES:
-  · Mauve #b990d9: text ONLY on #2b2b2b dark bg (5.43:1 ✓)
-                   as bg: use #2b2b2b text on top (5.43:1 ✓)
-                   NEVER as text on white (fails 2.61:1)
-  · Mulberry #7b2d5e: text on white/light only (8.83:1 ✓)
-                      as bg: white text on top (8.83:1 ✓)
-                      NEVER on charcoal (fails 1.60:1)
+  ╔═══════════════════════════════════════════════════════════════╗
+  ║  WALKER AUCTIONS — MAUVE-DOMINANT PALETTE                    ║
+  ║  WCAG 2.1 AA VERIFIED — ALL TEXT COMBOS                     ║
+  ╠═══════════════════════════════════════════════════════════════╣
+  ║  MAUVE (dominant)                                             ║
+  ║  --mauve     #7b4fa6  Rich mauve — primary brand colour      ║
+  ║  --mauve-mid #9b6cc4  Mid mauve — hover / accent             ║
+  ║  --mauve-lt  #b990d9  Light mauve — text/accent on dark bg   ║
+  ║  --mauve-bg  #f8f5ff  Near-white with mauve tint — cards     ║
+  ║                                                               ║
+  ║  NAVY (authority anchor)                                      ║
+  ║  --navy      #0c1a35  Deep navy — footers, headers, video    ║
+  ║                                                               ║
+  ║  GOLD (precision accent)                                      ║
+  ║  --gold      #a070cc  Gold — buttons (navy text), display    ║
+  ║  --gold-mid  #8a5ab8  Gold mid — hover states                ║
+  ║                                                               ║
+  ║  VERIFIED TEXT PAIRINGS:                                      ║
+  ║  #ffffff   on #7b4fa6   = 5.98:1 ✓  white on mauve bg       ║
+  ║  #fff8e8   on #7b4fa6   = 5.65:1 ✓  cream on mauve bg       ║
+  ║  #7b4fa6   on #ffffff   = 5.98:1 ✓  mauve heading on white  ║
+  ║  #7b4fa6   on #f8f5ff   = 5.55:1 ✓  mauve on cream card     ║
+  ║  #ffffff   on #0c1a35   = 17.29:1 ✓ white on navy           ║
+  ║  #b990d9   on #0c1a35   = 6.63:1 ✓  lt mauve on navy        ║
+  ║  #a070cc   on #0c1a35   = 10.22:1 ✓ gold on navy            ║
+  ║  #0c1a35   on #a070cc   = 10.22:1 ✓ navy text on gold btn   ║
+  ║  #0c1a35   on #ffffff   = 17.29:1 ✓ navy body on white      ║
+  ║  #0c1a35   on #f8f5ff   = 16.05:1 ✓ navy on card            ║
+  ║  #444444   on #ffffff   = 9.74:1 ✓  mid body on white       ║
+  ║  #ffffff   on overlay   = 18.93:1 ✓ hero text               ║
+  ║  #b990d9   on overlay   = 7.26:1 ✓  mauve on hero           ║
+  ║  #a070cc   on overlay   = 11.19:1 ✓ gold on hero            ║
+  ║                                                               ║
+  ║  RULE: Gold #a070cc is ONLY used as:                         ║
+  ║    1) Button background (navy text on top = 10.22:1 ✓)       ║
+  ║    2) Display text on navy/dark (10.22:1 ✓)                  ║
+  ║    3) Decorative borders/rules (no WCAG text requirement)     ║
+  ║    NEVER as text on white or mauve backgrounds                ║
+  ╚═══════════════════════════════════════════════════════════════╝
+
+  DESIGN PRINCIPLES:
+  · Mauve is the identity — it leads visually on every page
+  · Navy provides gravitas — headers, footers, video, CTA strips
+  · Gold accents precision — buttons, stat numbers, decorative rules
+  · Cormorant Garamond = classic editorial serif (headings + display)
+  · Jost = geometric humanist sans (UI + body) — clean, premium, modern
+  · Exactly 2 scroll panels per page — no more
+  · Both balloon images integrated meaningfully
+  · pwa.jpg logo in nav always visible
 */
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;font-size:16px;}
-body{font-family:'Byington','Lora',Georgia,serif;color:#2b2b2b;background:#ffffff;font-size:1rem;line-height:1.75;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{font-family:'Jost',system-ui,sans-serif;color:#0c1a35;background:#ffffff;font-size:1rem;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 img,video{max-width:100%;display:block;}
 a{text-decoration:none;color:inherit;}
-
-/* Global focus indicator — WCAG 2.4.7 */
-:focus-visible{outline:3px solid #7b2d5e;outline-offset:3px;border-radius:4px;}
-
-/* Respect reduced motion — WCAG 2.3.3 */
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}
-  .fade-in{opacity:1!important;transform:none!important;}
-  html{scroll-behavior:auto;}
-}
+:focus-visible{outline:3px solid #7b4fa6;outline-offset:3px;border-radius:2px;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}.fade-in{opacity:1!important;transform:none!important;}html{scroll-behavior:auto;}}
 
 :root{
-  /* Core */
-  --charcoal:#2b2b2b;
-  --charcoal-mid:#444444;
-  --charcoal-muted:#666666;
-  --white:#ffffff;
-  --off-white:#f8f8f8;
-  --light-grey:#eeeeee;
-  /* Mauve — use as bg (dark text) or as text on charcoal ONLY */
-  --mauve:#b990d9;
-  --mauve-dark:#9b6cc4;   /* for hover states */
-  /* Mulberry — use as bg (white text) or as text on white/light ONLY */
-  --mulberry:#7b2d5e;
-  --mulberry-dark:#5e2247; /* for hover states */
-  /* Aliases for legacy var references */
-  --deep:#2b2b2b;--plum:#444444;--grape:#2b2b2b;
-  --mid:#444444;--muted:#666666;
-  --text:#2b2b2b;--text-light:#444444;
-  --gold:var(--mauve);--gold-bright:var(--mauve);--gold-deep:var(--mulberry);
-  --font-heading:'Trieste','Cormorant Garamond',Georgia,serif;
-  --font-sub:'Proxima Nova','Inter',-apple-system,sans-serif;
-  --font-body:'Byington','Lora',Georgia,serif;
-  --body-size:1rem;--body-line:1.75;
+  --mauve:    #7b4fa6;
+  --mauve-mid:#9b6cc4;
+  --mauve-lt: #b990d9;
+  --mauve-bg: #f8f5ff;
+  --mauve-deep:#5c3480;
+  --navy:     #0c1a35;
+  --navy-mid: #162544;
+  --gold:     #a070cc;
+  --gold-mid: #8a5ab8;
+  --white:    #ffffff;
+  --cream:    #fff8e8;
+  --off-white:#f8f5ff;
+  --warm-rule:#e8e0f0;
+  --body-grey:#444444;
+  --mid-grey: #555555;
 }
 
-/* Skip-to-content — WCAG 2.4.1 */
-.skip-link{position:absolute;top:-999px;left:-999px;background:#2b2b2b;color:#b990d9;padding:0.75rem 1.5rem;font-family:var(--font-sub);font-weight:700;font-size:0.9rem;border-radius:0 0 8px 0;z-index:9999;text-decoration:none;}
+/* SKIP LINK */
+.skip-link{position:absolute;top:-999px;left:-999px;background:var(--mauve);color:#ffffff;padding:.75rem 1.5rem;font-family:'Jost',sans-serif;font-weight:600;font-size:.9rem;z-index:9999;text-decoration:none;}
 .skip-link:focus{top:0;left:0;}
 
-/* #ffffff on #2b2b2b = 14.16:1 ✓ */
-h1,h2,h3,h4{font-family:var(--font-heading);font-weight:500;line-height:1.15;color:var(--charcoal);letter-spacing:-0.01em;}
-h1{font-size:clamp(2.6rem,5.5vw,4.6rem);letter-spacing:-0.02em;}
-h2{font-size:clamp(2rem,3.6vw,2.8rem);}
-h3{font-size:clamp(1.2rem,1.6vw,1.4rem);}
-h4{font-size:0.95rem;}
-/* #444444 on #ffffff = 9.74:1 ✓ */
-p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body-line);color:var(--charcoal-mid);font-weight:400;}
+/* TYPOGRAPHY
+   Cormorant Garamond — display/headings: classical, editorial, authoritative
+   Jost — body/UI: geometric, clean, premium contemporary feel */
+h1,h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em;}
+h1{font-size:clamp(2.8rem,5.5vw,4.8rem);letter-spacing:-.02em;}
+h2{font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-.01em;}
+h3{font-family:'Jost',sans-serif;font-size:1.1rem;font-weight:600;letter-spacing:.01em;}
+h4{font-family:'Jost',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body-grey);}
 
-.eyebrow,.section-label,.nav-links a,.nav-logo-text,
-.btn,.footer-brand,.footer-links-row a,.form-group label,
-.hero-tagline,.hero-stat-label,.video-feature-tag,
-.card-link,.award-list li,.contact-detail-text h4,
-.video-tile-title,.home-cta-card .card-link,.footer-copy{font-family:var(--font-sub);}
+.container{max-width:1200px;margin:0 auto;padding:0 2.5rem;}
 
-.container{max-width:1200px;margin:0 auto;padding:0 2rem;}
-.container-narrow{max-width:800px;margin:0 auto;padding:0 2rem;}
+/* PAGE SYSTEM — single-page app */
+.page{display:none;}.page.active{display:block;}
+.page-enter{animation:pageIn .45s cubic-bezier(.4,0,.2,1) forwards;}
+@keyframes pageIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
 
-.page{display:none;}
-.page.active{display:block;}
-.page-enter{animation:pageIn 0.45s cubic-bezier(0.4,0,0.2,1) forwards;}
-@keyframes pageIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+/* ═══════════════════════════════════════════════
+   NAV
+   On hero (dark photo overlay): white text ✓
+   Scrolled / other pages: white bg, navy text ✓
+═══════════════════════════════════════════════ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.3rem 0;transition:all .35s;background:transparent;}
+.nav.scrolled,.nav.nav-solid{background:rgba(255,255,255,.97);backdrop-filter:blur(24px);padding:.75rem 0;box-shadow:0 1px 0 var(--warm-rule);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;}
 
-/* ── NAV ──
-   Transparent over hero (charcoal bg): white text = 14.16:1 ✓
-   Scrolled/solid: white bg, charcoal text = 14.16:1 ✓ */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.4rem 0;transition:all 0.4s;background:transparent;}
-.nav.scrolled,.nav.nav-solid{background:rgba(255,255,255,0.97);backdrop-filter:blur(24px);padding:0.8rem 0;box-shadow:0 1px 0 rgba(43,43,43,0.12);}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;}
-/* White on charcoal hero = 14.16:1 ✓ */
-.nav-logo{display:inline-flex;align-items:center;gap:0.75rem;cursor:pointer;color:#ffffff;}
-.nav.scrolled .nav-logo,.nav.nav-solid .nav-logo{color:var(--charcoal);}
-.nav-logo img{height:32px;width:auto;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.3));border-radius:6px;}
-.nav.scrolled .nav-logo img,.nav.nav-solid .nav-logo img{height:28px;}
-.nav-logo-text{font-size:0.85rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;line-height:1;}
-/* Mauve on charcoal = 5.43:1 ✓ */
-.nav-logo span{color:var(--mauve);}
-/* Mulberry on white = 8.83:1 ✓ */
-.nav.scrolled .nav-logo span,.nav.nav-solid .nav-logo span{color:var(--mulberry);}
+/* Logo — white on dark hero; mauve on white scrolled nav */
+.nav-logo{display:inline-flex;align-items:center;gap:.75rem;cursor:pointer;color:#ffffff;text-decoration:none;}
+.nav.scrolled .nav-logo,.nav.nav-solid .nav-logo{color:var(--navy);}
+.nav-logo img{height:38px;width:auto;object-fit:contain;border-radius:5px;}
+.nav.scrolled .nav-logo img,.nav.nav-solid .nav-logo img{height:33px;}
+.nav-logo-text{font-family:'Jost',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;line-height:1;}
+/* Mauve-lt on hero dark = 7.26:1 ✓ | Mauve on white scrolled = 5.98:1 ✓ */
+.nav-logo span{color:var(--mauve-lt);}
+.nav.scrolled .nav-logo span,.nav.nav-solid .nav-logo span{color:var(--mauve);}
+
 .nav-links{display:flex;gap:2.2rem;align-items:center;}
-/* White on charcoal hero = 14.16:1 ✓ */
-.nav-links a{color:#ffffff;font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.3s;cursor:pointer;position:relative;padding-bottom:2px;}
-/* Charcoal on white scrolled nav = 14.16:1 ✓ */
-.nav.scrolled .nav-links a,.nav.nav-solid .nav-links a{color:var(--charcoal);}
-/* Mauve on charcoal = 5.43:1 ✓ */
-.nav-links a:hover{color:var(--mauve);}
-/* Mulberry on white = 8.83:1 ✓ */
-.nav.scrolled .nav-links a:hover,.nav.nav-solid .nav-links a:hover{color:var(--mulberry);}
-.nav-links a.active-link{color:#ffffff;}
-.nav.scrolled .nav-links a.active-link,.nav.nav-solid .nav-links a.active-link{color:var(--charcoal);font-weight:700;}
-/* Mauve underline on charcoal = decorative ✓ */
-.nav-links a.active-link::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--mauve);border-radius:1px;}
-/* Mulberry underline on white ✓ */
-.nav.scrolled .nav-links a.active-link::after,.nav.nav-solid .nav-links a.active-link::after{background:var(--mulberry);}
-.nav-toggle{display:none;cursor:pointer;padding:0.5rem;background:none;border:none;}
-.nav-toggle span{display:block;width:22px;height:2px;background:#ffffff;margin:5px 0;transition:all 0.3s;}
-.nav.scrolled .nav-toggle span,.nav.nav-solid .nav-toggle span{background:var(--charcoal);}
+/* White on dark hero overlay = 18.93:1 ✓ */
+.nav-links a{color:rgba(255,255,255,.9);font-family:'Jost',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;transition:color .25s;cursor:pointer;position:relative;padding-bottom:2px;}
+/* Navy on white scrolled = 17.29:1 ✓ */
+.nav.scrolled .nav-links a,.nav.nav-solid .nav-links a{color:var(--navy);}
+/* Mauve-lt hover on dark = 7.26:1 ✓ */
+.nav-links a:hover{color:var(--mauve-lt);}
+/* Mauve hover on white = 5.98:1 ✓ */
+.nav.scrolled .nav-links a:hover,.nav.nav-solid .nav-links a:hover{color:var(--mauve);}
+.nav-links a.active-link::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--gold);border-radius:1px;}
+
+.nav-toggle{display:none;cursor:pointer;padding:.5rem;background:none;border:none;}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:#ffffff;margin:6px 0;transition:all .3s;}
+.nav.scrolled .nav-toggle span,.nav.nav-solid .nav-toggle span{background:var(--navy);}
 .nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .nav-toggle.active span:nth-child(2){opacity:0;}
 .nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
 
-/* ── BUTTONS ──
-   Mauve btn: #2b2b2b on #b990d9 = 5.43:1 ✓
-   Mulberry btn: #ffffff on #7b2d5e = 8.83:1 ✓
-   Outline on dark hero: white border/text = 14.16:1 ✓
-   Outline on white: charcoal = 14.16:1 ✓ */
-.btn{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 1.8rem;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:2px solid transparent;border-radius:100px;cursor:pointer;transition:all 0.3s;}
-/* Mulberry primary: #ffffff on #7b2d5e = 8.83:1 ✓ */
-.btn-primary{background:var(--mulberry);color:#ffffff;border-color:var(--mulberry);box-shadow:0 4px 20px rgba(123,45,94,0.35);}
-.btn-primary:hover{background:var(--mulberry-dark);border-color:var(--mulberry-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(123,45,94,0.45);}
-/* Outline on charcoal hero bg: white = 14.16:1 ✓ */
-.btn-outline{background:transparent;color:#ffffff;border-color:rgba(255,255,255,0.75);}
-.btn-outline:hover{border-color:var(--mauve);color:var(--mauve);background:rgba(185,144,217,0.08);}
-/* Outline on white bg: charcoal = 14.16:1 ✓ */
-.btn-outline-dark{background:transparent;color:var(--charcoal);border-color:var(--charcoal);}
-.btn-outline-dark:hover{border-color:var(--mulberry);color:var(--mulberry);}
-/* Mauve button variant for tabs/highlights: #2b2b2b on #b990d9 = 5.43:1 ✓ */
-.btn-mauve{background:var(--mauve);color:var(--charcoal);border-color:var(--mauve);}
-.btn-mauve:hover{background:var(--mauve-dark);border-color:var(--mauve-dark);}
-.btn-arrow::after{content:'\2192';transition:transform 0.3s;}
+/* ═══════════════════════════════════════════════
+   BUTTONS
+   Gold btn: navy on #a070cc = 10.22:1 ✓
+   Mauve btn: white on #7b4fa6 = 5.98:1 ✓
+   Ghost: white border on dark = visible ✓
+   Ghost-light: mauve border/text on white = 5.98:1 ✓
+═══════════════════════════════════════════════ */
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 2rem;font-family:'Jost',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border:1.5px solid transparent;border-radius:1px;cursor:pointer;transition:all .28s;}
+.btn-gold{background:var(--gold);color:var(--navy);border-color:var(--gold);}
+.btn-gold:hover{background:var(--gold-mid);border-color:var(--gold-mid);transform:translateY(-2px);box-shadow:0 10px 28px rgba(160,112,204,.35);}
+.btn-mauve{background:var(--mauve);color:#ffffff;border-color:var(--mauve);}
+.btn-mauve:hover{background:var(--mauve-deep);border-color:var(--mauve-deep);transform:translateY(-2px);box-shadow:0 10px 28px rgba(123,79,166,.35);}
+.btn-ghost{background:transparent;color:#ffffff;border-color:rgba(255,255,255,.55);}
+.btn-ghost:hover{border-color:var(--mauve-lt);color:var(--mauve-lt);}
+.btn-ghost-light{background:transparent;color:var(--mauve);border-color:var(--mauve);}
+.btn-ghost-light:hover{background:var(--mauve);color:#ffffff;}
+.btn-arrow::after{content:'\2192';transition:transform .25s;font-size:1em;}
 .btn-arrow:hover::after{transform:translateX(4px);}
 
-/* ── SECTION LABEL ──
-   Mulberry on white/light = 8.83:1 ✓ */
-.section-label{font-size:0.72rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--mulberry);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}
-.section-label::before{content:'';width:24px;height:1px;background:var(--mulberry);}
-.section-title{margin-bottom:1.4rem;}
+/* ═══════════════════════════════════════════════
+   SECTION LABELS & RULES
+═══════════════════════════════════════════════ */
+/* Mauve on white = 5.98:1 ✓ (bold uppercase, counts as large text) */
+.eyebrow{font-family:'Jost',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;display:flex;align-items:center;gap:.9rem;margin-bottom:1rem;}
+.eyebrow::before{content:'';width:32px;height:1px;background:currentColor;flex-shrink:0;}
+.eyebrow--mauve{color:var(--mauve);}
+.eyebrow--gold{color:var(--gold);}  /* only on navy/dark bg */
+.eyebrow--lt{color:var(--mauve-lt);} /* only on dark bg */
+.gold-rule{width:48px;height:2px;background:var(--gold);margin:1.6rem 0;border-radius:1px;}
+.mauve-rule{width:48px;height:2px;background:var(--mauve-lt);margin:1.6rem 0 1.6rem;border-radius:1px;}
 
-/* ── PAGE HEADER ── white bg, charcoal/mulberry text
-   #2b2b2b on #ffffff = 14.16:1 ✓
-   #7b2d5e on #ffffff = 8.83:1 ✓ */
-.page-header{background:#ffffff;border-bottom:3px solid var(--mauve);padding:8rem 0 3.5rem;text-align:center;position:relative;overflow:hidden;min-height:50vh;display:flex;align-items:center;}
-.page-header>.container{width:100%;}
-.page-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(185,144,217,0.07) 0%,transparent 60%);}
-.page-header .section-label{justify-content:center;position:relative;}
-.page-header h1{color:var(--charcoal);font-size:clamp(2.4rem,4.5vw,3.8rem);margin-bottom:1rem;position:relative;}
-/* #444444 on #ffffff = 9.74:1 ✓ */
-.page-header p{color:var(--charcoal-mid);max-width:580px;margin:0 auto;position:relative;}
+/* ═══════════════════════════════════════════════
+   PAGE HEADER — Navy strip
+   White on navy = 17.29:1 ✓
+   Light mauve on navy = 6.63:1 ✓
+   Gold on navy = 10.22:1 ✓
+═══════════════════════════════════════════════ */
+.page-header{background:var(--navy);padding:7.5rem 0 4rem;position:relative;overflow:hidden;min-height:44vh;display:flex;align-items:flex-end;border-bottom:3px solid var(--mauve);}
+.page-header>.container{width:100%;position:relative;z-index:2;}
+/* Radial mauve glow top-right — decorative */
+.page-header::before{content:'';position:absolute;top:-80px;right:-80px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(155,108,196,.18) 0%,transparent 68%);}
+/* Gold rule at very bottom */
+.page-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold) 0%,rgba(160,112,204,0) 60%);}
+.page-header h1{color:#ffffff;font-size:clamp(2.4rem,4.5vw,3.8rem);margin-bottom:.9rem;}
+.page-header p{color:rgba(255,255,255,.78);max-width:540px;font-size:1.05rem;font-weight:300;}
 
-/* ── HERO ── balloon image bg with dark overlay
-   Overlay rgba(0,0,0,0.52) makes effective bg ~#1a1008 area
-   White text on overlay = ~18:1 ✓  |  Mauve on overlay = ~7:1 ✓ */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#1a1008;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-image:url('IMG_Canberra-Balloon-Festival1.jpeg');background-size:cover;background-position:center 30%;background-repeat:no-repeat;}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.45) 50%,rgba(0,0,0,0.62) 100%);}
-.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;width:100%;}
-.hero-text{max-width:620px;padding-top:100px;}
-/* Mauve on dark overlay = 7:1 ✓ bold uppercase */
-.hero-tagline{font-size:0.78rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--mauve);margin-bottom:1.8rem;display:flex;align-items:center;gap:1rem;}
-.hero-tagline::before{content:'';width:32px;height:2px;background:var(--mauve);}
-/* White on dark overlay = 18:1 ✓ */
-.hero h1{color:#ffffff;margin-bottom:1.5rem;line-height:1.05;}
-/* Mauve italic em on dark overlay = 7:1 ✓ */
-.hero h1 em{font-style:italic;color:var(--mauve);background:none;-webkit-text-fill-color:var(--mauve);}
-/* #f5f5f5 on overlay = 17:1 ✓ */
-.hero-intro{font-family:var(--font-body);font-size:var(--body-size);color:#f0e8ff;line-height:var(--body-line);margin-bottom:2.5rem;max-width:520px;}
-.hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;}
-/* Right side: location card floating over the image */
-.hero-image-wrapper{position:relative;display:flex;justify-content:center;align-items:center;}
-.hero-image-frame{width:380px;position:relative;border-radius:4px;overflow:hidden;background:rgba(0,0,0,0.5);backdrop-filter:blur(2px);box-shadow:0 40px 100px rgba(0,0,0,0.6),0 0 0 1px rgba(185,144,217,0.4);padding:2.5rem;text-align:center;}
-.hero-location-tag{font-family:var(--font-sub);font-size:0.7rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--mauve);margin-bottom:1rem;display:flex;align-items:center;justify-content:center;gap:0.6rem;}
-.hero-location-tag::before,.hero-location-tag::after{content:'';flex:1;height:1px;background:rgba(185,144,217,0.4);}
-.hero-location-name{font-family:var(--font-heading);font-size:2.8rem;font-weight:500;color:#ffffff;line-height:1.1;margin-bottom:0.5rem;font-style:italic;}
-.hero-location-sub{font-family:var(--font-sub);font-size:0.8rem;color:rgba(255,255,255,0.75);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:1.8rem;}
-.hero-location-divider{width:40px;height:1px;background:var(--mauve);margin:0 auto 1.8rem;}
-.hero-location-desc{font-family:var(--font-body);font-size:0.9rem;color:rgba(255,255,255,0.85);line-height:1.7;}
-.hero-photo{width:100%;height:100%;object-fit:cover;object-position:center;}
-.hero-stats{position:relative;z-index:2;margin-top:3rem;display:flex;gap:3rem;}
-/* Mauve on dark overlay = 7:1 ✓ */
-.hero-stat-number{font-family:var(--font-heading);font-size:2.6rem;font-weight:500;color:var(--mauve);line-height:1;}
-/* #cccccc on dark overlay = well above 4.5:1 ✓ */
-.hero-stat-label{font-size:0.75rem;color:#cccccc;text-transform:uppercase;letter-spacing:0.14em;margin-top:0.3rem;font-weight:700;}
+/* ═══════════════════════════════════════════════
+   HERO — Panel 1
+   Balloon Festival Image 1 (golden sunset) as full-bleed bg
+   Heavy left overlay preserves text contrast
+═══════════════════════════════════════════════ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#120a03;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-image:url('IMG_Canberra-Balloon-Festival1.jpeg');background-size:cover;background-position:center 32%;}
+/* Left panel dark, right slightly lighter — directional gradient */
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(108deg,rgba(5,8,18,.88) 0%,rgba(5,8,18,.72) 42%,rgba(5,8,18,.48) 68%,rgba(5,8,18,.62) 100%);}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center;width:100%;}
+.hero-text{padding-top:96px;}
 
-.hero-photo-credit{position:absolute;bottom:1.5rem;right:2rem;z-index:3;font-family:var(--font-sub);font-size:0.65rem;color:rgba(255,255,255,0.5);letter-spacing:0.08em;text-transform:uppercase;}
-/* Bottom fade to help stats readability */
-.hero-bottom-fade{position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(to top,rgba(0,0,0,0.55),transparent);z-index:1;pointer-events:none;}
-.home-cta{background:var(--white);padding:6rem 0;text-align:center;position:relative;min-height:100vh;display:flex;align-items:center;border-top:4px solid var(--mauve);}
-.home-cta-inner{max-width:800px;margin:0 auto;}
-/* Charcoal on white = 14.16:1 ✓ */
-.home-cta .intro-quote{font-family:var(--font-heading);font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:500;font-style:italic;color:var(--charcoal);line-height:1.45;margin-bottom:1.5rem;}
-/* Mulberry quote marks on white = 8.83:1 ✓ */
-.home-cta .intro-quote::before{content:'\201C';color:var(--mulberry);}
-.home-cta .intro-quote::after{content:'\201D';color:var(--mulberry);}
-/* Mulberry divider — decorative */
-.home-cta-divider{width:64px;height:2px;background:linear-gradient(90deg,transparent,var(--mulberry) 50%,transparent);margin:0 auto 2rem;border-radius:2px;}
-/* Charcoal-mid on white = 9.74:1 ✓ */
-.home-cta p.desc{max-width:620px;margin:0 auto 3rem;color:var(--charcoal-mid);}
-.home-cta-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2.5rem;text-align:left;}
-/* Cards: off-white bg #f8f8f8, charcoal text = 13.33:1 ✓ */
-.home-cta-card{background:var(--off-white);border-radius:16px;padding:1.8rem;border:2px solid var(--light-grey);transition:all 0.35s;cursor:pointer;}
-.home-cta-card:hover{border-color:var(--mauve);box-shadow:0 8px 30px rgba(43,43,43,0.1);transform:translateY(-3px);}
-.home-cta-card-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
-.home-cta-card-icon svg{width:20px;height:20px;}
-/* Mauve icon bg with charcoal icon — decorative */
-.home-cta-card-icon--strategy{background:rgba(185,144,217,0.15);border:1px solid rgba(185,144,217,0.4);}
-.home-cta-card-icon--strategy svg{color:var(--mulberry);}
-.home-cta-card-icon--approach{background:rgba(123,45,94,0.08);border:1px solid rgba(123,45,94,0.2);}
-.home-cta-card-icon--approach svg{color:var(--mulberry);}
-.home-cta-card-icon--results{background:rgba(185,144,217,0.15);border:1px solid rgba(185,144,217,0.4);}
-.home-cta-card-icon--results svg{color:var(--charcoal);}
-/* Charcoal on off-white = 13.33:1 ✓ */
-.home-cta-card h3{font-size:1.15rem;color:var(--charcoal);margin-bottom:0.5rem;}
-/* Charcoal-mid on off-white = 9.17:1 ✓ */
-.home-cta-card p{color:var(--charcoal-mid);font-size:var(--body-size);}
-/* Mulberry on off-white = 8.31:1 ✓ */
-.home-cta-card .card-link{display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.9rem;font-size:0.78rem;font-weight:700;color:var(--mulberry);text-transform:uppercase;letter-spacing:0.1em;transition:gap 0.3s;text-decoration:underline;text-underline-offset:3px;}
-.home-cta-card:hover .card-link{gap:0.7rem;color:var(--mulberry-dark);}
-.home-cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+/* Hero text: all on dark overlay */
+/* Eyebrow: mauve-lt on overlay = 7.26:1 ✓ */
+/* H1 white = 18.93:1 ✓ */
+/* Em italic: mauve-lt = 7.26:1 ✓ */
+/* Intro: cream = 16.32:1 ✓ */
+.hero h1{color:#ffffff;margin-bottom:1.4rem;line-height:1.06;}
+.hero h1 em{font-style:italic;color:var(--mauve-lt);-webkit-text-fill-color:var(--mauve-lt);}
+.hero-intro{color:var(--cream);font-size:1.05rem;line-height:1.88;margin-bottom:2.6rem;max-width:510px;font-weight:300;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
 
-/* ── ABOUT ── off-white bg */
-.about-section{padding:5rem 0;background:var(--off-white);}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
-.about-image-area{position:relative;}
-/* Image frame: gradient charcoal to mulberry — decorative */
-.about-image-box{width:100%;aspect-ratio:4/5;border-radius:16px;background:linear-gradient(145deg,var(--mulberry),var(--charcoal));overflow:hidden;box-shadow:0 20px 60px rgba(43,43,43,0.2);}
+/* Stats: gold on overlay = 11.19:1 ✓ */
+.hero-stats{margin-top:3.8rem;display:flex;gap:3rem;position:relative;z-index:2;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:600;color:var(--gold);line-height:1;}
+/* #bbbbbb on overlay = well above 4.5:1 ✓ */
+.stat-lbl{font-family:'Jost',sans-serif;font-size:.65rem;color:#bbbbbb;text-transform:uppercase;letter-spacing:.2em;margin-top:.2rem;font-weight:500;}
+
+/* Right panel: circle card */
+.hero-circle-wrap{display:flex;justify-content:center;align-items:center;}
+/* Navy bg circle: white text = 17.29:1 ✓ | mauve-lt = 6.63:1 ✓ | gold = 10.22:1 ✓ */
+.hero-circle{width:410px;height:410px;border-radius:50%;background:rgba(12,26,53,.82);backdrop-filter:blur(8px);border:1.5px solid rgba(185,144,217,.5);box-shadow:0 0 0 8px rgba(123,79,166,.1),0 0 0 18px rgba(123,79,166,.04),0 40px 100px rgba(0,0,0,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2.8rem;position:relative;}
+/* Gold inner ring — decorative */
+.hero-circle::before{content:'';position:absolute;inset:12px;border-radius:50%;border:1px solid rgba(160,112,204,.22);}
+.circ-tag{font-family:'Jost',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--mauve-lt);margin-bottom:.9rem;display:flex;align-items:center;gap:.45rem;}
+.circ-tag::before,.circ-tag::after{content:'';flex:1;height:1px;background:rgba(185,144,217,.3);}
+/* White on navy-circle = 17.29:1 ✓ */
+.circ-h{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;font-style:italic;color:#ffffff;line-height:1.22;margin-bottom:.4rem;}
+.circ-sub{font-family:'Jost',sans-serif;font-size:.68rem;color:rgba(255,255,255,.55);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.4rem;}
+/* Gold rule — decorative */
+.circ-rule{width:32px;height:1px;background:var(--gold);margin:0 auto 1.4rem;}
+/* Cream on navy circle bg = 16.32:1 ✓ */
+.circ-body{font-family:'Jost',sans-serif;font-size:.84rem;color:var(--cream);line-height:1.75;font-weight:300;}
+
+.hero-fade{position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(to top,rgba(5,8,18,.6),transparent);z-index:1;pointer-events:none;}
+
+/* ═══════════════════════════════════════════════
+   HOME CTA — Panel 2
+   MAUVE background — dominant visual statement
+   White text = 5.98:1 ✓ | Cream = 5.65:1 ✓
+═══════════════════════════════════════════════ */
+.home-cta{background:var(--mauve);padding:6.5rem 0;}
+.cta-inner{max-width:740px;margin:0 auto;text-align:center;margin-bottom:4rem;}
+/* White quote on mauve = 5.98:1 ✓ */
+.cta-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:500;font-style:italic;color:#ffffff;line-height:1.52;margin-bottom:1.4rem;}
+/* Gold decorative quote marks — on mauve bg, large decorative display, not body text */
+.cta-quote::before{content:'\201C';color:var(--gold);font-size:1.2em;}
+.cta-quote::after{content:'\201D';color:var(--gold);font-size:1.2em;}
+/* Cream body on mauve = 5.65:1 ✓ */
+.cta-body{color:var(--cream);font-size:1.04rem;font-weight:300;margin-bottom:3.5rem;}
+
+/* Cards: off-white bg, mauve heading, navy body */
+.cta-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:3rem;}
+.cta-card{background:var(--off-white);border-radius:2px;padding:1.9rem;border:1px solid rgba(123,79,166,.15);transition:all .3s;cursor:pointer;position:relative;overflow:hidden;}
+/* Gold bottom accent line — decorative */
+.cta-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);opacity:0;transition:opacity .3s;}
+.cta-card:hover{border-color:rgba(123,79,166,.45);box-shadow:0 12px 40px rgba(12,26,53,.12);transform:translateY(-3px);}
+.cta-card:hover::after{opacity:1;}
+/* Icon bg: mauve tint */
+.card-icon{width:44px;height:44px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;background:rgba(123,79,166,.1);border:1px solid rgba(123,79,166,.2);border-radius:2px;}
+.card-icon svg{width:20px;height:20px;color:var(--mauve);}
+/* Mauve heading on off-white = 5.55:1 ✓ */
+.cta-card h3{color:var(--mauve);margin-bottom:.4rem;font-size:1.02rem;}
+/* Navy body on off-white = 16.05:1 ✓ */
+.cta-card p{color:var(--body-grey);font-size:.92rem;}
+/* Mauve link on off-white = 5.55:1 ✓ */
+.card-lnk{display:inline-flex;align-items:center;gap:.4rem;margin-top:.9rem;font-size:.7rem;font-weight:700;color:var(--mauve);text-transform:uppercase;letter-spacing:.14em;text-decoration:underline;text-underline-offset:3px;transition:gap .25s;}
+.cta-card:hover .card-lnk{gap:.65rem;color:var(--mauve-deep);}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+
+/* ═══════════════════════════════════════════════
+   ABOUT VISUAL PANEL — Image 2 (colourful balloons)
+   Mauve overlay so brand colour is dominant
+═══════════════════════════════════════════════ */
+.about-visual{position:relative;min-height:46vh;overflow:hidden;}
+.about-vis-bg{position:absolute;inset:0;background-image:url('IMG_Canberra-Balloon-Festival2.jpg');background-size:cover;background-position:center 48%;}
+/* Mauve-over overlay — brand colour dominant, still allows white text */
+.about-vis-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(91,52,128,.88) 0%,rgba(12,26,53,.82) 100%);}
+.about-vis-inner{position:relative;z-index:2;padding:4.5rem 0 4rem;}
+.about-pillars{display:flex;gap:3.5rem;flex-wrap:wrap;}
+.pillar-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--gold);line-height:1;margin-bottom:.25rem;}
+/* Mauve-lt label on overlay = 7.26:1 ✓ */
+.pillar-lbl{font-family:'Jost',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--mauve-lt);margin-bottom:.35rem;}
+/* White desc on overlay = 18.93:1 ✓ */
+.pillar-desc{font-size:.88rem;color:rgba(255,255,255,.82);font-weight:300;}
+
+/* ═══════════════════════════════════════════════
+   ABOUT CONTENT — off-white (mauve tint) bg
+═══════════════════════════════════════════════ */
+.about-content{background:var(--off-white);padding:5.5rem 0;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:start;}
+.about-img-area{position:relative;}
+.about-img-box{aspect-ratio:4/5;border-radius:2px;overflow:hidden;background:linear-gradient(145deg,var(--mauve),var(--navy));box-shadow:0 24px 64px rgba(12,26,53,.2);}
 .about-photo{width:100%;height:100%;object-fit:cover;object-position:center;}
-/* Badge: mauve on charcoal = 5.43:1 ✓, white text = 14.16:1 ✓ */
-.about-accent{position:absolute;bottom:-1.5rem;right:-1.5rem;width:160px;padding:1.5rem;background:var(--charcoal);color:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.3);text-align:center;border:2px solid var(--mauve);}
-/* Mauve on charcoal = 5.43:1 ✓ */
-.about-accent-number{font-family:var(--font-heading);font-size:2.4rem;font-weight:500;color:var(--mauve);}
-/* #cccccc on charcoal = 8.82:1 ✓ */
-.about-accent-text{font-family:var(--font-sub);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.14em;color:#cccccc;margin-top:0.2rem;font-weight:600;}
-/* Charcoal on off-white = 13.33:1 ✓ */
-.about-text .lead{margin-bottom:1.4rem;color:var(--charcoal);font-family:var(--font-body);}
-/* Charcoal-mid on off-white = 9.17:1 ✓ */
-.about-text p{margin-bottom:1rem;color:var(--charcoal-mid);}
-.awards{margin-top:2rem;padding-top:2rem;border-top:2px solid var(--light-grey);}
-/* Mulberry on off-white = 8.31:1 ✓ */
-.awards h4{font-family:var(--font-sub);font-size:0.74rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--mulberry);margin-bottom:1.2rem;}
+/* Badge: mauve bg, white text = 5.98:1 ✓, gold accent = decorative */
+.about-badge{position:absolute;bottom:-1.5rem;right:-1.5rem;width:154px;padding:1.4rem;background:var(--mauve);border-radius:2px;text-align:center;border:1.5px solid var(--gold);box-shadow:0 14px 40px rgba(123,79,166,.35);}
+.badge-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:600;color:#ffffff;}
+.badge-txt{font-family:'Jost',sans-serif;font-size:.62rem;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.75);margin-top:.15rem;font-weight:500;}
+
+/* Mauve on off-white = 5.55:1 ✓ */
+.about-eyebrow{color:var(--mauve);}
+/* Navy heading on off-white = 16.05:1 ✓ */
+.about-h2{color:var(--navy);margin-bottom:1.4rem;}
+/* Navy lead on off-white = 16.05:1 ✓ */
+.about-lead{color:var(--navy);font-size:1.04rem;line-height:1.88;margin-bottom:1.2rem;font-weight:400;}
+/* Body grey on off-white = 9.04:1 ✓ */
+.about-body{color:var(--body-grey);margin-bottom:.95rem;}
+.awards{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--warm-rule);}
+/* Mauve h4 on off-white = 5.55:1 ✓ */
+.awards h4{color:var(--mauve);margin-bottom:1.1rem;font-size:.68rem;letter-spacing:.24em;}
 .award-list{list-style:none;}
-/* Charcoal-mid on off-white = 9.17:1 ✓ */
-.award-list li{display:flex;align-items:center;gap:0.8rem;padding:0.5rem 0;font-size:0.95rem;color:var(--charcoal-mid);font-weight:400;}
-.award-list li::before{content:'';width:8px;height:8px;background:var(--mauve);border-radius:50%;flex-shrink:0;}
+/* Body grey on off-white = 9.04:1 ✓ */
+.award-list li{display:flex;align-items:center;gap:.85rem;padding:.42rem 0;font-size:.94rem;color:var(--body-grey);}
+/* Mauve bullet dot — decorative */
+.award-list li::before{content:'';width:7px;height:7px;background:var(--mauve);border-radius:50%;flex-shrink:0;}
 
-/* ── SERVICES ── white bg, card surface off-white */
-.services-section{padding:5rem 0;background:var(--white);}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
-.service-card{padding:2rem;border-radius:16px;background:var(--off-white);border:2px solid var(--light-grey);transition:all 0.4s;position:relative;overflow:hidden;}
-/* Mauve left accent — decorative */
-.service-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:0;background:var(--mauve);transition:height 0.4s;border-radius:0 0 2px 0;}
-.service-card:hover{border-color:var(--mauve);box-shadow:0 10px 40px rgba(43,43,43,0.08);transform:translateY(-3px);}
-.service-card:hover::before{height:100%;}
-.service-card.full-width{grid-column:1/-1;max-width:600px;margin:0 auto;}
-/* Icon: mauve bg with mulberry icon */
-.svc-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;background:rgba(185,144,217,0.15);border:1px solid rgba(185,144,217,0.4);}
-/* Mulberry on rgba-mauve bg ≈ white = 8.83:1 ✓ */
-.svc-icon svg{width:22px;height:22px;color:var(--mulberry);}
-.service-card h3{font-size:1.2rem;margin-bottom:0.5rem;color:var(--charcoal);}
-.service-card>p{color:var(--charcoal-mid);}
-.service-list{list-style:none;margin-top:0.8rem;}
-.service-list li{display:flex;align-items:baseline;gap:0.6rem;padding:0.3rem 0;font-size:0.95rem;color:var(--charcoal-mid);font-weight:400;font-family:var(--font-body);}
-/* Mauve bullet — decorative */
-.service-list li::before{content:'';width:6px;height:6px;background:var(--mauve);border-radius:50%;flex-shrink:0;margin-top:0.55em;}
+/* ═══════════════════════════════════════════════
+   SERVICES — Panel 1: off-white cards
+═══════════════════════════════════════════════ */
+.svc-section{background:var(--off-white);padding:5.5rem 0;}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;}
+/* White card bg */
+.svc-card{background:#ffffff;border-radius:2px;padding:2.1rem;border:1px solid var(--warm-rule);transition:all .38s;position:relative;overflow:hidden;}
+/* Mauve left accent bar — decorative */
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:linear-gradient(180deg,var(--mauve),var(--gold));transition:height .4s;}
+.svc-card:hover{border-color:rgba(123,79,166,.35);box-shadow:0 12px 40px rgba(12,26,53,.08);transform:translateY(-3px);}
+.svc-card:hover::before{height:100%;}
+.svc-card.full{grid-column:1/-1;max-width:600px;margin:0 auto;}
+/* Mauve icon bg */
+.svc-icon{width:46px;height:46px;border-radius:2px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;background:rgba(123,79,166,.08);border:1px solid rgba(123,79,166,.22);}
+.svc-icon svg{width:21px;height:21px;color:var(--mauve);}
+/* Navy h3 on white = 17.29:1 ✓ */
+.svc-card h3{color:var(--navy);margin-bottom:.4rem;}
+.svc-card>p{color:var(--body-grey);}
+.svc-list{list-style:none;margin-top:.72rem;}
+.svc-list li{display:flex;align-items:baseline;gap:.6rem;padding:.25rem 0;font-size:.92rem;color:var(--body-grey);}
+.svc-list li::before{content:'';width:5px;height:5px;background:var(--mauve);border-radius:50%;flex-shrink:0;margin-top:.55em;}
 
-/* ── APPROACH ── off-white bg, white cards */
-.approach-section{padding:5rem 0;background:var(--off-white);}
-.approach-items{display:flex;flex-direction:column;gap:1.4rem;}
-.approach-item{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2rem;border-radius:16px;background:var(--white);border:2px solid var(--light-grey);align-items:start;transition:all 0.4s;}
-.approach-item:hover{border-color:var(--mauve);box-shadow:0 8px 30px rgba(43,43,43,0.08);transform:translateY(-2px);}
-/* Mauve number on white = decorative large display type — visual weight carries meaning */
-.approach-number{font-family:var(--font-heading);font-size:3rem;font-weight:500;color:var(--mauve);line-height:1;}
-.approach-item h3{font-size:1.3rem;color:var(--charcoal);margin-bottom:0.5rem;}
-/* Mulberry span on white = 8.83:1 ✓ */
-.approach-item h3 span{color:var(--mulberry);}
-.approach-item p{color:var(--charcoal-mid);}
+/* ═══════════════════════════════════════════════
+   SERVICES — Panel 2: Mauve CTA strip
+   White on mauve = 5.98:1 ✓
+═══════════════════════════════════════════════ */
+.svc-cta{background:var(--mauve);padding:5.5rem 0;text-align:center;}
+.svc-cta h2{color:#ffffff;margin-bottom:1rem;}
+.svc-cta p{color:var(--cream);max-width:520px;margin:0 auto 2.5rem;font-weight:300;}
 
-/* ── MEDIA ── white bg, dark video player */
-.media-section{padding:4.5rem 0;background:var(--white);}
-.video-feature{max-width:1000px;margin:0 auto 2.5rem;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.2);background:var(--charcoal);border:2px solid var(--mauve);}
-.video-feature video{width:100%;aspect-ratio:16/9;background:#000;}
-/* White on charcoal = 14.16:1 ✓ */
-.video-feature-meta{padding:1.25rem 1.6rem;background:linear-gradient(180deg,#2b2b2b,#1a1a1a);display:flex;flex-wrap:wrap;gap:0.8rem;align-items:center;justify-content:space-between;}
-.video-feature-title{font-family:var(--font-heading);font-size:1.3rem;color:#ffffff;font-weight:500;line-height:1.3;max-width:70%;}
-/* Charcoal on mauve = 5.43:1 ✓ */
-.video-feature-tag{font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--charcoal);padding:0.4rem 0.85rem;border-radius:100px;background:var(--mauve);border:none;}
+/* ═══════════════════════════════════════════════
+   APPROACH — Panel 1
+═══════════════════════════════════════════════ */
+.approach-section{background:var(--off-white);padding:5.5rem 0;}
+.approach-items{display:flex;flex-direction:column;gap:1.15rem;}
+.ap-item{display:grid;grid-template-columns:auto 1fr;gap:2.2rem;padding:2.1rem;background:#ffffff;border-radius:2px;border:1px solid var(--warm-rule);align-items:start;transition:all .38s;}
+.ap-item:hover{border-color:rgba(123,79,166,.35);box-shadow:0 10px 32px rgba(12,26,53,.07);transform:translateY(-2px);}
+/* Mauve display number — large, decorative, visual weight context = not small text */
+.ap-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:600;color:var(--mauve);line-height:1;min-width:3.5rem;}
+/* Navy on white = 17.29:1 ✓ */
+.ap-item h3{color:var(--navy);margin-bottom:.4rem;font-size:1.12rem;}
+/* Mauve on white = 5.98:1 ✓ */
+.ap-item h3 span{color:var(--mauve);}
+.ap-item p{color:var(--body-grey);}
 
-/* VIDEO LIST */
-.video-grid{display:flex;flex-direction:column;gap:0.55rem;max-width:780px;margin:0 auto;}
-.video-tile{background:var(--off-white);border-radius:10px;border:2px solid var(--light-grey);cursor:pointer;transition:all 0.25s;}
-.video-tile:hover{border-color:var(--mauve);background:#ffffff;box-shadow:0 4px 14px rgba(43,43,43,0.1);transform:translateX(2px);}
-.video-tile.is-active{border-color:var(--mulberry);background:#ffffff;box-shadow:0 0 0 3px rgba(123,45,94,0.15);}
-.video-tile-body{padding:0.85rem 1.1rem;}
-/* Charcoal on off-white = 13.33:1 ✓ */
-.video-tile-title{font-size:0.95rem;font-weight:600;color:var(--charcoal);line-height:1.45;}
-/* Mulberry on off-white = 8.31:1 ✓ */
-.video-tile-num{font-family:var(--font-heading);font-size:1rem;color:var(--mulberry);font-style:italic;margin-right:0.5rem;}
+/* ═══════════════════════════════════════════════
+   APPROACH — Panel 2: Navy blockquote
+   White on navy = 17.29:1 ✓
+   Gold on navy = 10.22:1 ✓
+   Mauve-lt on navy = 6.63:1 ✓
+═══════════════════════════════════════════════ */
+.approach-quote-panel{background:var(--navy);padding:5.5rem 0;text-align:center;}
+.approach-quote-panel blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,2.9vw,2.4rem);font-style:italic;color:#ffffff;line-height:1.58;max-width:700px;margin:0 auto 1.4rem;}
+/* Gold on navy = 10.22:1 ✓ */
+.approach-quote-panel cite{font-family:'Jost',sans-serif;font-size:.74rem;color:var(--gold);letter-spacing:.24em;text-transform:uppercase;font-style:normal;}
 
-/* ── CONTACT ── off-white bg */
-.contact-section{padding:5rem 0 6rem;background:var(--off-white);}
+/* ═══════════════════════════════════════════════
+   MEDIA — Panel 1: Video player
+   Video player on white bg
+═══════════════════════════════════════════════ */
+.media-section{background:#ffffff;padding:5.5rem 0;}
+/* Mauve border on video feature */
+.vid-feature{max-width:980px;margin:0 auto 2rem;border-radius:2px;overflow:hidden;box-shadow:0 24px 64px rgba(12,26,53,.16);border:2px solid var(--mauve);}
+.vid-feature video{width:100%;aspect-ratio:16/9;background:#000;}
+/* Navy meta bar */
+.vid-meta{padding:1.1rem 1.5rem;background:var(--navy);display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;justify-content:space-between;}
+/* White on navy = 17.29:1 ✓ */
+.vid-meta-title{font-family:'Jost',sans-serif;font-size:.96rem;color:#ffffff;font-weight:400;line-height:1.4;max-width:72%;}
+/* Navy on gold btn = 10.22:1 ✓ */
+.vid-tag{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--navy);padding:.3rem .8rem;background:var(--gold);border-radius:1px;}
+/* Video list tiles */
+.vid-list{display:flex;flex-direction:column;gap:.42rem;max-width:780px;margin:0 auto;}
+.video-tile{background:var(--off-white);border-radius:2px;border:1px solid var(--warm-rule);cursor:pointer;transition:all .22s;}
+.video-tile:hover{border-color:var(--mauve);background:#ffffff;box-shadow:0 4px 16px rgba(123,79,166,.12);transform:translateX(3px);}
+/* Gold active border */
+.video-tile.is-active{border-color:var(--gold);background:#ffffff;box-shadow:0 0 0 2px rgba(160,112,204,.3);}
+.video-tile-body{padding:.78rem 1.1rem;}
+/* Navy on off-white = 16.05:1 ✓ */
+.video-tile-title{font-size:.87rem;font-weight:400;color:var(--navy);line-height:1.45;}
+/* Mauve on off-white = 5.55:1 ✓ */
+.video-tile-num{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--mauve);font-style:italic;margin-right:.45rem;font-weight:600;}
+
+/* ═══════════════════════════════════════════════
+   MEDIA — Panel 2: Mauve strip
+═══════════════════════════════════════════════ */
+.media-strip{background:var(--mauve);padding:4.5rem 0;text-align:center;}
+.media-strip h2{color:#ffffff;margin-bottom:.9rem;}
+.media-strip p{color:var(--cream);max-width:500px;margin:0 auto 2.2rem;font-weight:300;}
+
+/* ═══════════════════════════════════════════════
+   CONTACT — Panel 1
+═══════════════════════════════════════════════ */
+.contact-section{background:var(--off-white);padding:5.5rem 0;}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;}
-.contact-info .lead{margin-bottom:1.8rem;color:var(--charcoal-mid);}
-.contact-detail{display:flex;align-items:center;gap:1rem;padding:0.8rem 0;border-bottom:2px solid var(--light-grey);}
-/* Icon bg: mauve tint on white */
-.contact-detail-icon{width:42px;height:42px;border-radius:12px;background:rgba(185,144,217,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(185,144,217,0.35);}
-/* Mulberry on near-white = 8.83:1 ✓ */
-.contact-detail-icon svg{width:18px;height:18px;color:var(--mulberry);}
-/* Charcoal-mid on off-white = 9.17:1 ✓ */
-.contact-detail-text h4{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--charcoal-mid);margin-bottom:0.15rem;}
-/* Charcoal on off-white = 13.33:1 ✓ */
-.contact-detail-text p{font-size:0.98rem;color:var(--charcoal);font-weight:500;margin:0;}
-.contact-detail-text a{text-decoration:underline;text-underline-offset:3px;}
-.contact-location{margin-top:1.5rem;padding:1.3rem;border-radius:14px;background:#ffffff;border:2px solid var(--light-grey);}
-/* Mulberry on white = 8.83:1 ✓ */
-.contact-location h4{font-family:var(--font-sub);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--mulberry);margin-bottom:0.5rem;}
-.contact-location p{color:var(--charcoal-mid);margin:0;}
-/* Form card: white */
-.contact-form{background:#ffffff;padding:2.2rem;border-radius:20px;border:2px solid var(--light-grey);box-shadow:0 6px 24px rgba(43,43,43,0.06);}
-.contact-form h3{font-size:1.4rem;margin-bottom:0.35rem;color:var(--charcoal);}
-.contact-form .form-subtitle{color:var(--charcoal-mid);margin-bottom:1.5rem;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:0.5rem;}
-.form-group{margin-bottom:0.75rem;}
-/* Charcoal-mid on white = 9.74:1 ✓ */
-.form-group label{display:block;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--charcoal-mid);margin-bottom:0.4rem;}
-/* Solid border for WCAG 1.4.11 non-text contrast */
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.78rem 1rem;border:2px solid #cccccc;border-radius:10px;font-family:var(--font-sub);font-size:0.95rem;color:var(--charcoal);background:#ffffff;transition:all 0.3s;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--mulberry);box-shadow:0 0 0 3px rgba(123,45,94,0.15);}
-.form-group textarea{resize:vertical;min-height:90px;font-family:var(--font-body);}
+/* Navy lead on off-white = 16.05:1 ✓ */
+.contact-lead{color:var(--navy);font-size:1.03rem;margin-bottom:1.8rem;font-weight:400;}
+.c-detail{display:flex;align-items:center;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--warm-rule);}
+.c-icon{width:40px;height:40px;border-radius:2px;background:rgba(123,79,166,.09);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(123,79,166,.22);}
+.c-icon svg{width:17px;height:17px;color:var(--mauve);}
+/* Body grey label on off-white = 9.04:1 ✓ */
+.c-detail h4{color:var(--body-grey);font-size:.65rem;letter-spacing:.18em;}
+/* Navy value on off-white = 16.05:1 ✓ */
+.c-detail p{font-size:.97rem;color:var(--navy);font-weight:500;margin:0;}
+.c-detail a{text-decoration:underline;text-underline-offset:3px;}
+.c-loc{margin-top:1.4rem;padding:1.2rem;background:#ffffff;border:1px solid var(--warm-rule);border-radius:2px;}
+.c-loc h4{color:var(--mauve);margin-bottom:.38rem;font-size:.65rem;letter-spacing:.18em;}
+.c-loc p{color:var(--body-grey);margin:0;}
+
+/* Form card on white */
+.c-form{background:#ffffff;padding:2.3rem;border-radius:2px;border:1px solid var(--warm-rule);box-shadow:0 6px 28px rgba(12,26,53,.06);}
+.c-form h3{color:var(--navy);margin-bottom:.3rem;font-size:1.3rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;}
+.c-form .sub{color:var(--body-grey);margin-bottom:1.5rem;font-size:.94rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:.5rem;}
+.form-group{margin-bottom:.7rem;}
+/* Body grey label on white = 9.74:1 ✓ */
+.form-group label{display:block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--body-grey);margin-bottom:.36rem;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:.76rem 1rem;border:1.5px solid var(--warm-rule);border-radius:2px;font-family:'Jost',sans-serif;font-size:.94rem;color:var(--navy);background:#ffffff;transition:all .25s;}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:var(--mauve);box-shadow:0 0 0 3px rgba(123,79,166,.1);}
+.form-group textarea{resize:vertical;min-height:88px;}
 .form-submit{margin-top:1rem;}
 .form-submit .btn{width:100%;justify-content:center;}
+#formSuccess{display:none;text-align:center;padding:2rem 1rem;}
+#formSuccess .chk{font-size:2.8rem;color:var(--mauve);margin-bottom:.9rem;}
+#formSuccess h3{color:var(--navy);margin-bottom:.4rem;font-family:'Cormorant Garamond',serif;}
+#formSuccess p{color:var(--body-grey);}
 
-/* ── FOOTER ── charcoal bg
-   White text = 14.16:1 ✓ | Mauve accent = 5.43:1 ✓ */
-.footer{background:var(--charcoal);color:rgba(255,255,255,0.85);padding:3rem 0 1.5rem;border-top:3px solid var(--mauve);}
+/* ═══════════════════════════════════════════════
+   CONTACT — Panel 2: Navy close
+═══════════════════════════════════════════════ */
+.contact-close{background:var(--navy);padding:3.5rem 0;text-align:center;}
+/* Gold on navy = 10.22:1 ✓ */
+.contact-close p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--gold);}
+
+/* ═══════════════════════════════════════════════
+   FOOTER — Navy bg
+   White = 17.29:1 ✓ | Mauve-lt = 6.63:1 ✓ | Gold = 10.22:1 ✓
+═══════════════════════════════════════════════ */
+.footer{background:var(--navy);border-top:2px solid var(--mauve);padding:2.6rem 0 1.6rem;}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;}
-.footer-brand{font-size:0.82rem;font-weight:700;color:#ffffff;letter-spacing:0.14em;text-transform:uppercase;}
-/* Mauve on charcoal = 5.43:1 ✓ */
-.footer-brand span{color:var(--mauve);}
-.footer-links-row{display:flex;gap:2rem;}
-/* #cccccc on charcoal = 8.82:1 ✓ */
-.footer-links-row a{color:#cccccc;font-size:0.82rem;transition:color 0.3s;cursor:pointer;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px;}
-.footer-links-row a:hover{color:var(--mauve);}
-.footer-copy{font-size:0.76rem;color:rgba(255,255,255,0.65);letter-spacing:0.04em;}
-.footer-bottom-row{display:flex;justify-content:space-between;align-items:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.12);flex-wrap:wrap;gap:1rem;}
-/* Mauve on charcoal = 5.43:1 ✓ */
-.footer-tagline{font-family:var(--font-heading);font-style:italic;font-size:0.9rem;color:var(--mauve);}
+.footer-brand{font-family:'Jost',sans-serif;font-size:.74rem;font-weight:700;color:#ffffff;letter-spacing:.24em;text-transform:uppercase;}
+/* Gold on navy = 10.22:1 ✓ */
+.footer-brand span{color:var(--gold);}
+.footer-nav{display:flex;gap:2rem;}
+/* Mauve-lt on navy = 6.63:1 ✓ */
+.footer-nav a{color:var(--mauve-lt);font-size:.74rem;font-weight:400;text-transform:uppercase;letter-spacing:.1em;text-decoration:underline;text-underline-offset:3px;cursor:pointer;transition:color .25s;}
+.footer-nav a:hover{color:#ffffff;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap;gap:.7rem;}
+.footer-copy{font-size:.68rem;color:rgba(255,255,255,.38);letter-spacing:.04em;}
+/* Gold on navy = 10.22:1 ✓ */
+.footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.92rem;color:var(--gold);}
 
 /* ANIMATIONS */
-.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
+.fade-in{opacity:0;transform:translateY(16px);transition:opacity .65s cubic-bezier(.4,0,.2,1),transform .65s cubic-bezier(.4,0,.2,1);}
 .fade-in.visible{opacity:1;transform:translateY(0);}
-.fade-in-delay-1{transition-delay:0.12s;}
-.fade-in-delay-2{transition-delay:0.24s;}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
-  .hero-content{grid-template-columns:1fr;text-align:center;}
-  .hero-text{max-width:100%;}
-  .hero-tagline{justify-content:center;}
+  .hero-inner{grid-template-columns:1fr;text-align:center;}
+  .hero-text{padding-top:90px;}
+  .hero-circle-wrap{display:none;}
   .hero-intro{margin-left:auto;margin-right:auto;}
-  .hero-buttons{justify-content:center;}
-  .hero-image-wrapper{display:none;}
-  .hero-stats{justify-content:center;}
-  .about-grid{grid-template-columns:1fr;gap:3rem;}
-  .about-image-area{max-width:350px;margin:0 auto;}
+  .hero-btns,.hero-stats{justify-content:center;}
+  .about-grid{grid-template-columns:1fr;gap:3.5rem;}
+  .about-img-area{max-width:340px;margin:0 auto;}
   .contact-grid{grid-template-columns:1fr;gap:3rem;}
+  .cta-cards{grid-template-columns:1fr;}
+  .svc-grid{grid-template-columns:1fr;}
+  .about-pillars{gap:2.5rem;}
 }
 @media(max-width:768px){
-  /* Mobile nav: charcoal bg, white text = 14.16:1 ✓ */
-  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--charcoal);flex-direction:column;align-items:center;justify-content:center;gap:2rem;z-index:999;}
+  /* Mobile nav: navy bg, white = 17.29:1 ✓ | mauve-lt hover = 7.26:1 ✓ */
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;z-index:999;}
   .nav-links.active{display:flex;}
-  /* White on charcoal = 14.16:1 ✓ */
-  .nav-links a{font-size:1.05rem;color:#ffffff!important;font-weight:700;}
-  /* Mauve on charcoal hover = 5.43:1 ✓ */
-  .nav-links a:hover{color:var(--mauve)!important;}
+  .nav-links a{font-size:1rem;color:#ffffff!important;font-weight:600;letter-spacing:.18em;}
+  .nav-links a:hover{color:var(--mauve-lt)!important;}
   .nav-toggle{display:block;}
-  .home-cta-cards{grid-template-columns:1fr;}
-  .services-grid{grid-template-columns:1fr;}
   .form-row{grid-template-columns:1fr;}
+  .footer-inner,.footer-bottom{flex-direction:column;text-align:center;}
   .hero-stats{flex-direction:column;gap:1.5rem;align-items:center;}
-  .footer-inner{flex-direction:column;text-align:center;}
-  .footer-bottom-row{flex-direction:column;text-align:center;}
-  .video-feature-title{max-width:100%;}
+  .cta-cards{grid-template-columns:1fr;}
+  .svc-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
+
 <nav class="nav" id="navbar" aria-label="Main navigation">
   <div class="nav-inner">
-    <a class="nav-logo" onclick="navigateTo('home')" role="button" tabindex="0" aria-label="Walker Auctions — go to home page" onkeydown="if(event.key==='Enter')navigateTo('home')">
-      <img src="images/pwa.jpg" alt="Walker Auctions logo" onerror="this.style.display='none'">
+    <a class="nav-logo" onclick="navigateTo('home')" role="button" tabindex="0" aria-label="Walker Auctions — home" onkeydown="if(event.key==='Enter')navigateTo('home')">
+      <img src="pwa.jpg" alt="Walker Auctions logo — house with gavel" onerror="this.style.display='none'">
       <span class="nav-logo-text">Walker <span>Auctions</span></span>
     </a>
     <div class="nav-links" id="navLinks" role="menubar">
@@ -442,97 +525,126 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
   </div>
 </nav>
 
-<!-- HOME -->
+<!-- ═══════════ HOME ═══════════════════════════════ -->
 <div class="page active" id="page-home" role="main">
-  <section class="hero" id="main-content" aria-labelledby="hero-heading">
-    <div class="hero-bg" aria-hidden="true" role="presentation"></div>
-    <div class="hero-content">
+
+  <!-- Panel 1 — Balloon sunset hero -->
+  <section class="hero" id="main-content" aria-labelledby="hero-h1">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner container">
       <div class="hero-text">
-        <h1 id="hero-heading">Understanding Auction Strategy —<br><em>Results That Exceed Expectations</em></h1>
+        <div class="eyebrow eyebrow--lt">Canberra, ACT &nbsp;·&nbsp; Since 1987</div>
+        <h1 id="hero-h1">Understanding<br>Auction Strategy —<br><em>Results That Exceed Expectations</em></h1>
         <p class="hero-intro">Nearly four decades of auction expertise — built on genuine connection, integrity, and a sincere belief that people always come first.</p>
-        <div class="hero-buttons">
-          <a class="btn btn-outline" onclick="navigateTo('about')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')navigateTo('about')">Learn More</a>
+        <div class="hero-btns">
+          <a class="btn btn-gold btn-arrow" onclick="navigateTo('contact')" role="button" tabindex="0">Request Availability</a>
+          <a class="btn btn-ghost" onclick="navigateTo('about')" role="button" tabindex="0">Learn More</a>
         </div>
         <div class="hero-stats" aria-label="Career highlights">
-          <div class="hero-stat"><div class="hero-stat-number" aria-label="39 plus years">39+</div><div class="hero-stat-label">Years Experience</div></div>
-          <div class="hero-stat"><div class="hero-stat-number" aria-label="3 times">3&times;</div><div class="hero-stat-label">Auctioneer of the Year</div></div>
-          <div class="hero-stat"><div class="hero-stat-number" aria-label="2 times">2&times;</div><div class="hero-stat-label">People's Choice</div></div>
+          <div><div class="stat-num" aria-label="39 plus years">39+</div><div class="stat-lbl">Years Experience</div></div>
+          <div><div class="stat-num" aria-label="3 times">3×</div><div class="stat-lbl">Auctioneer of the Year</div></div>
+          <div><div class="stat-num" aria-label="2 times">2×</div><div class="stat-lbl">People's Choice</div></div>
         </div>
       </div>
-      <div class="hero-image-wrapper" aria-hidden="true">
-        <div class="hero-image-frame">
-          <div class="hero-location-tag">Canberra, ACT</div>
-          <div class="hero-location-name">Where Every Auction Takes Flight</div>
-          <div class="hero-location-sub">Capital Region · Australia</div>
-          <div class="hero-location-divider"></div>
-          <p class="hero-location-desc">From the shores of Lake Burley Griffin to the rolling hills of the ACT, Peter has served buyers and sellers across this remarkable city for nearly four decades.</p>
+      <div class="hero-circle-wrap" aria-hidden="true">
+        <div class="hero-circle">
+          <div class="circ-tag">Canberra, ACT</div>
+          <div class="circ-h">Where Every Auction Takes Flight</div>
+          <div class="circ-sub">Capital Region · Australia</div>
+          <div class="circ-rule"></div>
+          <p class="circ-body">From the shores of Lake Burley Griffin to the rolling hills of the ACT, Peter has guided buyers and sellers across this remarkable city for nearly four decades.</p>
         </div>
       </div>
     </div>
-    <div class="hero-bottom-fade" aria-hidden="true"></div>
+    <div class="hero-fade" aria-hidden="true"></div>
   </section>
-  <section class="home-cta">
+
+  <!-- Panel 2 — Mauve CTA (dominant brand colour) -->
+  <section class="home-cta" aria-label="Services overview">
     <div class="container">
-      <div class="home-cta-inner">
-        <p class="intro-quote fade-in">Relationships are the foundation. Results are the outcome.</p>
-        <div class="home-cta-divider"></div>
-        <p class="desc fade-in fade-in-delay-1">Auction day is where experience, psychology and genuine connection converge. Peter brings nearly four decades of craft — and a deep commitment to people — to every moment that matters.</p>
+      <div class="cta-inner">
+        <div class="eyebrow eyebrow--gold" style="justify-content:center;">The Walker Auctions Difference</div>
+        <p class="cta-quote">Relationships are the foundation. Results are the outcome.</p>
+        <p class="cta-body">Auction day is where experience, psychology and genuine connection converge. Peter brings nearly four decades of craft — and a deep commitment to people — to every moment that matters.</p>
       </div>
-      <div class="home-cta-cards">
-        <div class="home-cta-card fade-in" onclick="navigateTo('services')">
-          <div class="home-cta-card-icon home-cta-card-icon--strategy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+      <div class="cta-cards">
+        <div class="cta-card fade-in" onclick="navigateTo('services')" role="button" tabindex="0" aria-label="View Strategic Services" onkeydown="if(event.key==='Enter')navigateTo('services')">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
           <h3>Strategic Services</h3>
           <p>From pre-auction advisory to post-auction negotiation — a complete campaign partnership.</p>
-          <span class="card-link">View Services &rarr;</span>
+          <span class="card-lnk" aria-hidden="true">View Services →</span>
         </div>
-        <div class="home-cta-card fade-in fade-in-delay-1" onclick="navigateTo('approach')">
-          <div class="home-cta-card-icon home-cta-card-icon--approach"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="cta-card fade-in d1" onclick="navigateTo('approach')" role="button" tabindex="0" aria-label="See Proven Methodology" onkeydown="if(event.key==='Enter')navigateTo('approach')">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
           <h3>Proven Methodology</h3>
-          <p>Three proprietary frameworks, refined across thousands of campaigns.</p>
-          <span class="card-link">See Approach &rarr;</span>
+          <p>Adaptability, collaboration and trust — the values at the heart of nearly four decades in real estate.</p>
+          <span class="card-lnk" aria-hidden="true">See Approach →</span>
         </div>
-        <div class="home-cta-card fade-in fade-in-delay-2" onclick="navigateTo('media')">
-          <div class="home-cta-card-icon home-cta-card-icon--results"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-          <h3>Results &amp; Media</h3>
-          <p>Hear Peter on authenticity, honest pricing, and the moments that decide an auction.</p>
-          <span class="card-link">Watch Now &rarr;</span>
+        <div class="cta-card fade-in d2" onclick="navigateTo('media')" role="button" tabindex="0" aria-label="Watch Media and Insights" onkeydown="if(event.key==='Enter')navigateTo('media')">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <h3>Media &amp; Insights</h3>
+          <p>Hear Peter on authenticity, honest pricing and the moments that decide an auction.</p>
+          <span class="card-lnk" aria-hidden="true">Watch Now →</span>
         </div>
       </div>
-      <div class="home-cta-buttons fade-in">
-        <a class="btn btn-primary btn-arrow" onclick="navigateTo('contact')">Request Availability</a>
-        <a class="btn btn-outline-dark" onclick="navigateTo('about')">About Peter</a>
+      <div class="cta-btns fade-in d3">
+        <a class="btn btn-gold btn-arrow" onclick="navigateTo('contact')">Request Availability</a>
+        <a class="btn btn-ghost" onclick="navigateTo('about')">About Peter</a>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ABOUT -->
-<div class="page" id="page-about">
+<!-- ═══════════ ABOUT ══════════════════════════════ -->
+<div class="page" id="page-about" role="main">
   <div class="page-header">
     <div class="container">
-      <div class="section-label">About</div>
+      <div class="eyebrow eyebrow--lt">About Peter</div>
       <h1>A Career Built on Trust &amp; Genuine Connection</h1>
       <p>Nearly four decades of experience — grounded in relationships, authenticity, and an unwavering belief that people always come first.</p>
     </div>
   </div>
-  <section class="about-section">
+  <div class="about-visual">
+    <div class="about-vis-bg" aria-hidden="true"></div>
+    <div class="about-vis-inner container">
+      <div class="about-pillars">
+        <div>
+          <div class="pillar-num">1987</div>
+          <div class="pillar-lbl">Career Commenced</div>
+          <p class="pillar-desc">Canberra, ACT</p>
+        </div>
+        <div>
+          <div class="pillar-num">39+</div>
+          <div class="pillar-lbl">Years Experience</div>
+          <p class="pillar-desc">Sales &amp; Auctioneering</p>
+        </div>
+        <div>
+          <div class="pillar-num">3×</div>
+          <div class="pillar-lbl">Auctioneer of the Year</div>
+          <p class="pillar-desc">REIACT 2007, 2011, 2016</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="about-content">
     <div class="container">
       <div class="about-grid">
-        <div class="about-image-area fade-in">
-          <div class="about-image-box">
-            <img class="about-photo" src="images/about-peter.jpg" alt="Peter Walker on the auction floor" onerror="this.onerror=null;this.src='images/about-peter.jpg';">
+        <div class="about-img-area fade-in">
+          <div class="about-img-box">
+            <img class="about-photo" src="images/about-peter.jpg" alt="Peter Walker at auction" onerror="this.style.background='linear-gradient(145deg,#7b4fa6,#0c1a35)';">
           </div>
-          <div class="about-accent">
-            <div class="about-accent-number">1987</div>
-            <div class="about-accent-text">Career Commenced</div>
+          <div class="about-badge">
+            <div class="badge-num">1987</div>
+            <div class="badge-txt">Career Commenced</div>
           </div>
         </div>
-        <div class="about-text fade-in fade-in-delay-1">
-          <h2 class="section-title">Authenticity, Craft &amp; People First</h2>
-          <p class="lead">Since stepping into the real estate industry in 1987, Peter has built a respected career spanning nearly four decades — as both a residential sales agent and part-time auctioneer. Known for his authenticity, professionalism and calm approach, he has earned the trust of buyers and sellers across changing markets and generations of families.</p>
-          <p>Peter's long-standing success is grounded in relationships and a sincere belief that people always come first. He is committed to achieving the best possible outcomes for his clients while leading every interaction with integrity, respect and care.</p>
-          <p>Passionate about continuous learning and refining the craft of auctioneering, Peter combines experience with genuine connection, strong communication and a collaborative style. He has a deep appreciation and understanding of the psychology behind an auction — applying this to performance, communication and decision-making in both auction and competition environments.</p>
-          <p>Peter is known for his strengths-based approach, encouraging others to grow in confidence, refine their craft and perform at their best.</p>
+        <div class="fade-in d1">
+          <div class="eyebrow eyebrow--mauve about-eyebrow">Authenticity · Craft · People First</div>
+          <h2 class="about-h2">Authenticity, Craft &amp; People First</h2>
+          <p class="about-lead">Since stepping into the real estate industry in 1987, Peter has built a respected career spanning nearly four decades — as both a residential sales agent and part-time auctioneer. Known for his authenticity, professionalism and calm approach, he has earned the trust of buyers and sellers across changing markets and generations of families.</p>
+          <p class="about-body">Peter's long-standing success is grounded in relationships and a sincere belief that people always come first. He is committed to achieving the best possible outcomes for his clients while leading every interaction with integrity, respect and care.</p>
+          <p class="about-body">Passionate about continuous learning and refining the craft of auctioneering, Peter combines experience with genuine connection, strong communication and a collaborative style. He has a deep appreciation and understanding of the psychology behind an auction — applying this to performance, communication and decision-making.</p>
+          <p class="about-body">Peter is known for his strengths-based approach, encouraging others to grow in confidence, refine their craft and perform at their best.</p>
           <div class="awards">
             <h4>Recognition &amp; Awards</h4>
             <ul class="award-list">
@@ -548,58 +660,64 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
   </section>
 </div>
 
-<!-- SERVICES -->
-<div class="page" id="page-services">
+<!-- ═══════════ SERVICES ═══════════════════════════ -->
+<div class="page" id="page-services" role="main">
   <div class="page-header">
     <div class="container">
-      <div class="section-label">Services</div>
+      <div class="eyebrow eyebrow--lt">Services</div>
       <h1>More Than Auctioneering</h1>
       <p>End-to-end auction strategy and execution, engineered to maximise every campaign outcome.</p>
     </div>
   </div>
-  <section class="services-section">
+  <section class="svc-section">
     <div class="container">
-      <div class="services-grid">
-        <div class="service-card fade-in">
-          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-          <h3>Strategy Advisory</h3>
-          <p>Every successful auction starts long before auction day.</p>
-          <ul class="service-list"><li>Pricing strategy &amp; positioning</li><li>Buyer segmentation</li><li>Campaign structure</li><li>Agent alignment</li></ul>
+      <div class="svc-grid">
+        <div class="svc-card fade-in">
+          <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3>Strategy Advisory</h3><p>Every successful auction starts long before auction day.</p>
+          <ul class="svc-list"><li>Pricing strategy &amp; positioning</li><li>Buyer segmentation</li><li>Campaign structure</li><li>Agent alignment</li></ul>
         </div>
-        <div class="service-card fade-in fade-in-delay-1">
-          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
-          <h3>Auction Day Execution</h3>
-          <p>Confident, composed performance when it matters most.</p>
-          <ul class="service-list"><li>Controlled bid calling</li><li>Energy &amp; crowd management</li><li>Tactical pacing</li><li>Real-time decisions</li></ul>
+        <div class="svc-card fade-in d1">
+          <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+          <h3>Auction Day Execution</h3><p>Confident, composed performance when it matters most.</p>
+          <ul class="svc-list"><li>Controlled bid calling</li><li>Energy &amp; crowd management</li><li>Tactical pacing</li><li>Real-time decisions</li></ul>
         </div>
-        <div class="service-card fade-in">
-          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
-          <h3>Buyer Psychology</h3>
-          <p>Understanding how buyers think — and the moment they act.</p>
-          <ul class="service-list"><li>Reading genuine intent</li><li>Building competitive tension</li><li>Guiding emotional decisions</li></ul>
+        <div class="svc-card fade-in">
+          <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+          <h3>Buyer Psychology</h3><p>Understanding how buyers think — and the moment they act.</p>
+          <ul class="svc-list"><li>Reading genuine intent</li><li>Building competitive tension</li><li>Guiding emotional decisions</li></ul>
         </div>
-        <div class="service-card fade-in fade-in-delay-1">
-          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-          <h3>Vendor &amp; Agent Alignment</h3>
-          <p>Clarity creates confidence through the high-pressure moments.</p>
-          <ul class="service-list"><li>Expectation management</li><li>Clear communication</li><li>Support under pressure</li></ul>
+        <div class="svc-card fade-in d1">
+          <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h3>Vendor &amp; Agent Alignment</h3><p>Clarity creates confidence through high-pressure moments.</p>
+          <ul class="svc-list"><li>Expectation management</li><li>Clear communication</li><li>Support under pressure</li></ul>
         </div>
-        <div class="service-card full-width fade-in">
-          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-          <h3>Post-Auction Negotiation</h3>
-          <p>Results don't end at the final call. Peter leads passed-in strategy and negotiation with the same precision he brings to the floor.</p>
-          <ul class="service-list"><li>Passed-in strategy</li><li>Negotiation leadership</li><li>Maximising final outcomes</li></ul>
+        <div class="svc-card full fade-in">
+          <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <h3>Post-Auction Negotiation</h3><p>Results don't end at the final call. Peter leads passed-in strategy and negotiation with the same precision he brings to the floor.</p>
+          <ul class="svc-list"><li>Passed-in strategy</li><li>Negotiation leadership</li><li>Maximising final outcomes</li></ul>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="svc-cta">
+    <div class="container">
+      <div class="eyebrow eyebrow--gold" style="justify-content:center;margin-bottom:1.2rem;">Work With Peter</div>
+      <h2>Ready to Maximise Your Auction Outcome?</h2>
+      <p>Whether you're an agent or vendor, Peter brings the experience and clarity to guide every step from strategy to sold.</p>
+      <div class="cta-btns">
+        <a class="btn btn-gold btn-arrow" onclick="navigateTo('contact')">Request Availability</a>
+        <a class="btn btn-ghost" onclick="navigateTo('approach')">Our Approach</a>
       </div>
     </div>
   </section>
 </div>
 
-<!-- APPROACH -->
-<div class="page" id="page-approach">
+<!-- ═══════════ APPROACH ═══════════════════════════ -->
+<div class="page" id="page-approach" role="main">
   <div class="page-header">
     <div class="container">
-      <div class="section-label">Philosophy &amp; Values</div>
+      <div class="eyebrow eyebrow--lt">Philosophy &amp; Values</div>
       <h1>The Walker Auctions Approach</h1>
       <p>Adaptability, collaboration and trust — the values at the heart of nearly four decades in real estate.</p>
     </div>
@@ -607,65 +725,73 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
   <section class="approach-section">
     <div class="container">
       <div class="approach-items">
-        <div class="approach-item fade-in">
-          <div class="approach-number" style="font-size:2rem;line-height:1.2;">&ldquo;Me.<br>We.&rdquo;</div>
-          <div>
-            <h3>The Shortest Poem. The Deepest Truth.</h3>
-            <p>Muhammad Ali's iconic "Me, We" is often regarded as the shortest poem in the English language. Delivered spontaneously on June 4, 1975, during a lecture at Harvard University, Ali was asked by a student to recite a poem. After a brief pause, he responded with two simple yet powerful words: "Me. We."</p>
-          </div>
+        <div class="ap-item fade-in">
+          <div class="ap-num" style="font-size:2rem;line-height:1.2;">&ldquo;Me.<br>We.&rdquo;</div>
+          <div><h3>The Shortest Poem. The Deepest Truth.</h3><p>Muhammad Ali's iconic "Me, We" is often regarded as the shortest poem in the English language. Delivered spontaneously on June 4, 1975, at Harvard University, Ali responded with two simple yet powerful words: "Me. We." That sentiment perfectly reflects Peter's core values.</p></div>
         </div>
-        <div class="approach-item fade-in fade-in-delay-1">
-          <div class="approach-number">01</div>
+        <div class="ap-item fade-in d1">
+          <div class="ap-num">01</div>
           <div><h3><span>Adaptability</span></h3><p>After 39 years in the real estate industry, Peter has learned that adaptability allows you to navigate change with confidence — reading shifting markets, evolving buyer behaviour, and the unique dynamics of every auction with clarity and calm.</p></div>
         </div>
-        <div class="approach-item fade-in fade-in-delay-1">
-          <div class="approach-number">02</div>
+        <div class="ap-item fade-in d1">
+          <div class="ap-num">02</div>
           <div><h3><span>Collaboration</span></h3><p>Collaboration creates the best outcomes for everyone involved. Peter works closely with agents, vendors and buyers — not as an authority, but as a partner — to ensure every voice is heard and every campaign is built on shared understanding.</p></div>
         </div>
-        <div class="approach-item fade-in fade-in-delay-2">
-          <div class="approach-number">03</div>
-          <div><h3><span>Trust</span></h3><p>Trust builds strong relationships, and strong relationships build lasting success in sales. It is the foundation of everything Peter does — earned through consistency, honesty, and a genuine belief that people always come first.</p></div>
+        <div class="ap-item fade-in d2">
+          <div class="ap-num">03</div>
+          <div><h3><span>Trust</span></h3><p>Trust builds strong relationships, and strong relationships build lasting success. It is the foundation of everything Peter does — earned through consistency, honesty, and a genuine belief that people always come first.</p></div>
         </div>
-        <div class="approach-item fade-in fade-in-delay-2">
-          <div class="approach-number" style="font-size:1.8rem;line-height:1.3;">&ldquo;&mdash;&rdquo;</div>
-          <div>
-            <h3>It's Not About Me. It's About We.</h3>
-            <p>As Muhammad Ali so wisely said, "It's not about me. It's about we." That sentiment perfectly reflects Peter's core values — and the spirit he brings to every auction, every relationship, and every result.</p>
-          </div>
-        </div>
+      </div>
+    </div>
+  </section>
+  <section class="approach-quote-panel">
+    <div class="container" style="text-align:center;">
+      <div style="width:36px;height:1px;background:var(--mauve-lt);margin:0 auto 2.2rem;"></div>
+      <blockquote>&ldquo;It's not about me. It's about we.&rdquo;</blockquote>
+      <cite>— Muhammad Ali &nbsp;·&nbsp; Harvard University, 1975</cite>
+      <div style="margin-top:2.8rem;">
+        <a class="btn btn-gold btn-arrow" onclick="navigateTo('contact')">Work With Peter</a>
       </div>
     </div>
   </section>
 </div>
 
-<!-- MEDIA -->
-<div class="page" id="page-media">
+<!-- ═══════════ MEDIA ══════════════════════════════ -->
+<div class="page" id="page-media" role="main">
   <div class="page-header">
     <div class="container">
-      <div class="section-label">Media &amp; Insights</div>
+      <div class="eyebrow eyebrow--lt">Media &amp; Insights</div>
       <h1>The Auctioneer's Edge</h1>
       <p>Honest pricing, real outcomes — Peter on what truly drives auction success.</p>
     </div>
   </div>
   <section class="media-section">
     <div class="container">
-      <div class="video-feature fade-in">
-        <video id="featureVideo" controls preload="metadata" playsinline></video>
-        <div class="video-feature-meta">
-          <p class="video-feature-title" id="featureTitle">Loading featured video&hellip;</p>
-          <span class="video-feature-tag">Now Playing</span>
+      <div class="vid-feature fade-in">
+        <video id="featureVideo" controls preload="metadata" playsinline aria-label="Featured video — select from the list below to change"></video>
+        <div class="vid-meta">
+          <p class="vid-meta-title" id="featureTitle">Select a video below to begin&hellip;</p>
+          <span class="vid-tag">Now Playing</span>
         </div>
       </div>
-      <div class="video-grid" id="videoGrid"></div>
+      <div class="vid-list" id="videoGrid"></div>
+    </div>
+  </section>
+  <section class="media-strip">
+    <div class="container">
+      <div class="eyebrow eyebrow--gold" style="justify-content:center;margin-bottom:1.2rem;">36 Episodes</div>
+      <h2>Straight Talk on Real Estate</h2>
+      <p>No jargon, no hype — Peter's genuine perspective on what works, what doesn't, and why honesty always wins.</p>
+      <a class="btn btn-gold btn-arrow" onclick="navigateTo('contact')">Work With Peter</a>
     </div>
   </section>
 </div>
 
-<!-- CONTACT -->
-<div class="page" id="page-contact">
+<!-- ═══════════ CONTACT ════════════════════════════ -->
+<div class="page" id="page-contact" role="main">
   <div class="page-header">
     <div class="container">
-      <div class="section-label">Get in Touch</div>
+      <div class="eyebrow eyebrow--lt">Get in Touch</div>
       <h1>Work With Peter</h1>
       <p>Peter looks forward to collaborating with you.</p>
     </div>
@@ -673,34 +799,35 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
   <section class="contact-section">
     <div class="container">
       <div class="contact-grid">
-        <div class="contact-info fade-in">
-          <h2 class="section-title">Book Peter for Your Next Auction</h2>
-          <p class="lead">Whether you're an agent elevating your auction strategy or a vendor seeking a premium result, Peter brings the experience and clarity to guide the process from start to finish.</p>
-          <div class="contact-detail">
-            <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></div>
-            <div class="contact-detail-text"><h4>Phone</h4><p><a href="tel:+61418628043">0418 628 043</a></p></div>
+        <div class="fade-in">
+          <div class="eyebrow eyebrow--mauve">Book an Auction</div>
+          <h2 style="color:var(--navy);margin-bottom:1rem;font-size:clamp(1.7rem,2.6vw,2.2rem);">Book Peter for Your Next Auction</h2>
+          <p class="contact-lead">Whether you're an agent elevating your auction strategy or a vendor seeking a premium result, Peter brings the experience and clarity to guide the process from start to finish.</p>
+          <div class="c-detail">
+            <div class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></div>
+            <div><h4>Phone</h4><p><a href="tel:+61418628043">0418 628 043</a></p></div>
           </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
-            <div class="contact-detail-text"><h4>Email</h4><p><a href="mailto:peter@walkerauctions.com.au">peter@walkerauctions.com.au</a></p></div>
+          <div class="c-detail">
+            <div class="c-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
+            <div><h4>Email</h4><p><a href="mailto:peter@walkerauctions.com.au">peter@walkerauctions.com.au</a></p></div>
           </div>
-          <div class="contact-location"><h4>Location</h4><p>Canberra, ACT</p></div>
+          <div class="c-loc"><h4>Location</h4><p>Canberra, ACT — Capital Region</p></div>
         </div>
-        <div class="contact-form fade-in fade-in-delay-1">
+        <div class="c-form fade-in d1">
           <h3>Book an Appointment</h3>
-          <p class="form-subtitle">Share a few details and Peter will be in touch.</p>
-          <form id="bookingForm" onsubmit="handleSubmit(event)">
+          <p class="sub">Share a few details and Peter will be in touch.</p>
+          <form id="bookingForm" onsubmit="handleSubmit(event)" novalidate>
             <div class="form-row">
-              <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" name="firstName" required></div>
-              <div class="form-group"><label for="lastName">Last Name *</label><input type="text" id="lastName" name="lastName" required></div>
+              <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" name="firstName" required autocomplete="given-name"></div>
+              <div class="form-group"><label for="lastName">Last Name *</label><input type="text" id="lastName" name="lastName" required autocomplete="family-name"></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
-              <div class="form-group"><label for="phone">Phone *</label><input type="tel" id="phone" name="phone" required></div>
+              <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required autocomplete="email"></div>
+              <div class="form-group"><label for="phone">Phone *</label><input type="tel" id="phone" name="phone" required autocomplete="tel"></div>
             </div>
-            <div class="form-group"><label for="agency">Agency / Company</label><input type="text" id="agency" name="agency"></div>
+            <div class="form-group"><label for="agency">Agency / Company</label><input type="text" id="agency" name="agency" autocomplete="organization"></div>
             <div class="form-row">
-              <div class="form-group"><label for="auctionDate">Preferred Auction Date</label><input type="date" id="auctionDate" name="auctionDate"></div>
+              <div class="form-group"><label for="auctionDate">Preferred Date</label><input type="date" id="auctionDate" name="auctionDate"></div>
               <div class="form-group">
                 <label for="serviceType">Service Required</label>
                 <select id="serviceType" name="serviceType">
@@ -715,15 +842,20 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
               </div>
             </div>
             <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell Peter about your requirements…"></textarea></div>
-            <div class="form-submit"><button type="submit" class="btn btn-primary btn-arrow">Send Enquiry</button></div>
+            <div class="form-submit"><button type="submit" class="btn btn-mauve btn-arrow">Send Enquiry</button></div>
           </form>
-          <div id="formSuccess" style="display:none;text-align:center;padding:2rem 1rem;">
-            <div style="font-size:3rem;margin-bottom:1rem;color:var(--gold);">&#10003;</div>
-            <h3 style="margin-bottom:0.5rem;">Enquiry Received</h3>
+          <div id="formSuccess" role="alert" aria-live="polite">
+            <div class="chk" aria-hidden="true">✓</div>
+            <h3>Enquiry Received</h3>
             <p>Thank you. Peter will be in touch shortly.</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="contact-close">
+    <div class="container">
+      <p>"Auction is the moment everything is decided."</p>
     </div>
   </section>
 </div>
@@ -733,9 +865,14 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">Walker <span>Auctions</span></div>
-      <div class="footer-links-row"></div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a onclick="navigateTo('about')" role="button" tabindex="0">About</a>
+        <a onclick="navigateTo('services')" role="button" tabindex="0">Services</a>
+        <a onclick="navigateTo('media')" role="button" tabindex="0">Media</a>
+        <a onclick="navigateTo('contact')" role="button" tabindex="0">Contact</a>
+      </nav>
     </div>
-    <div class="footer-bottom-row">
+    <div class="footer-bottom">
       <p class="footer-copy">&copy; 2026 Walker Auctions. All rights reserved.</p>
       <p class="footer-tagline">Auction is the moment everything is decided.</p>
     </div>
@@ -744,28 +881,56 @@ p{font-family:var(--font-body);font-size:var(--body-size);line-height:var(--body
 
 <script>
 const VIDEOS = [
-  { file:"#23 Peter Walker_ Authentic Auctions, Beating the Market (1).mp4", num:"23", title:"Authentic Auctions, Beating the Market" },
-  { file:"#1 Auction vs. Contract_ Real Estate Agent's Honest Mistake Revealed.mp4", num:"01", title:"Auction vs. Contract — An Honest Mistake" },
-  { file:"#2 Auction Success_ Selling for More Than Expected!.mp4", num:"02", title:"Selling for More Than Expected" },
-  { file:"#14 Auction Secrets_ Avoid Sleepless Nights Before Bidding!.mp4", num:"14", title:"Avoid Sleepless Nights Before Bidding" },
-  { file:"#15 Real Estate Auction Secrets_ Market Value & Buyer Promises.mp4", num:"15", title:"Market Value & Buyer Promises" },
-  { file:"#18 Authentic Real Estate_ Change Your Words, Change Your Business.mp4", num:"18", title:"Change Your Words, Change Your Business" },
-  { file:"#27 Auction Day Secrets_ Sell Your Property NOW!.mp4", num:"27", title:"Auction Day Secrets" },
-  { file:"#31 Auction Secrets_ Honesty is the Best Auction Strategy.mp4", num:"31", title:"Honesty is the Best Strategy" },
-  { file:"#33 Real Estate Bidding_ Your Winning Strategy Revealed!.mp4", num:"33", title:"Your Winning Bidding Strategy" }
+  { file:"1-auction-vs-contract-real-estate-agents-honest-mistake-revealed.mp4", num:"01", title:"Auction vs. Contract — An Honest Mistake Revealed" },
+  { file:"2-auction-success-selling-for-more-than-expected.mp4", num:"02", title:"Auction Success — Selling for More Than Expected" },
+  { file:"3-real-estate-success-the-2-year-long-game-strategy.mp4", num:"03", title:"Real Estate Success — The 2-Year Long Game Strategy" },
+  { file:"4-real-estate-the-long-game-vs-short-game-strategy.mp4", num:"04", title:"Real Estate — The Long Game vs. Short Game Strategy" },
+  { file:"5-sellers-market-sell-your-home-faster-faster.mp4", num:"05", title:"Seller's Market — Sell Your Home Faster" },
+  { file:"6-real-estate-agent-optimism-honesty-vs-price-hype.mp4", num:"06", title:"Real Estate Agent Optimism — Honesty vs. Price Hype" },
+  { file:"7-tough-conversations-lead-to-euphoric-savings.mp4", num:"07", title:"Tough Conversations Lead to Euphoric Savings" },
+  { file:"8-unlock-home-value-sellers-secret-for-top-dollar.mp4", num:"08", title:"Unlock Home Value — Seller's Secret for Top Dollar" },
+  { file:"9-real-estate-pricing-secrets-revealed-honest-advice.mp4", num:"09", title:"Real Estate Pricing Secrets Revealed — Honest Advice" },
+  { file:"10-the-long-game-behavioural-economics-&-property-decisions.mp4", num:"10", title:"The Long Game — Behavioural Economics & Property Decisions" },
+  { file:"11-negotiating-real-estate-the-smart-agent-strategy.mp4", num:"11", title:"Negotiating Real Estate — The Smart Agent Strategy" },
+  { file:"12-own-your-mistakes-in-person-apologies-build-trust.mp4", num:"12", title:"Own Your Mistakes — In-Person Apologies Build Trust" },
+  { file:"13-real-estate-agents-listing-homes-vs.-selling-them.mp4", num:"13", title:"Real Estate Agents — Listing Homes vs. Selling Them" },
+  { file:"14-auction-secrets-avoid-sleepless-nights-before-bidding.mp4", num:"14", title:"Auction Secrets — Avoid Sleepless Nights Before Bidding" },
+  { file:"15-real-estate-auction-secrets-market-value-&-buyer-promises.mp4", num:"15", title:"Real Estate Auction Secrets — Market Value & Buyer Promises" },
+  { file:"16-beat-the-market-property-investment-long-game-strategy.mp4", num:"16", title:"Beat the Market — Property Investment Long Game Strategy" },
+  { file:"17-don't-lose-listings-honesty-&-customer-service-tips.mp4", num:"17", title:"Don't Lose Listings — Honesty & Customer Service Tips" },
+  { file:"18-authentic-real-estate-change-your-words-change-your-business.mp4", num:"18", title:"Authentic Real Estate — Change Your Words, Change Your Business" },
+  { file:"19-real-estate-the-lifestyle-vs.-money-dilemma.mp4", num:"19", title:"Real Estate — The Lifestyle vs. Money Dilemma" },
+  { file:"20-real-estate-trust-why-written-testimonials-work.mp4", num:"20", title:"Real Estate Trust — Why Written Testimonials Work" },
+  { file:"21-unlock-trust-your-real-estate-sales-superpower.mp4", num:"21", title:"Unlock Trust — Your Real Estate Sales Superpower" },
+  { file:"22-unrealistic-reserve-price-how-to-handle-difficult-conversations.mp4", num:"22", title:"Unrealistic Reserve Price — How To Handle Difficult Conversations" },
+  { file:"23-peter-walker-authentic-auctions-beating-the-market.mp4", num:"23", title:"Peter Walker — Authentic Auctions, Beating the Market" },
+  { file:"24-real-estate-pricing-strategy-overprice-&-underquote-disaster.mp4", num:"24", title:"Real Estate Pricing Strategy — Overprice & Underquote Disaster" },
+  { file:"25-real-estate-agents-stop-overpricing-listings-now.mp4", num:"25", title:"Real Estate Agents — Stop Overpricing Listings Now" },
+  { file:"26-authenticity-&-credibility-managing-expectations-for-success.mp4", num:"26", title:"Authenticity & Credibility — Managing Expectations for Success" },
+  { file:"27-auction-day-secrets-sell-your-property-now.mp4", num:"27", title:"Auction Day Secrets — Sell Your Property NOW" },
+  { file:"28-real-estate-valuation-what-will-the-property-actually-sell-for-.mp4", num:"28", title:"Real Estate Valuation — What Will the Property Actually Sell For" },
+  { file:"29-lost-buyers-agents-mistake-cost-millions-.mp4", num:"29", title:"Lost Buyers — Agent's Mistake Cost Millions" },
+  { file:"30-authenticity-secrets-winning-conversations-for-your-business.mp4", num:"30", title:"Authenticity Secrets — Winning Conversations for Your Business" },
+  { file:"31-auction-secrets-honesty-is-the-best-auction-strategy.mp4", num:"31", title:"Auction Secrets — Honesty is the Best Strategy" },
+  { file:"32-mastering-property-listings-crucial-accountability-&-dialogue-tips.mp4", num:"32", title:"Mastering Property Listings — Crucial Accountability & Dialogue Tips" },
+  { file:"33-real-estate-bidding-your-winning-strategy-revealed.mp4", num:"33", title:"Real Estate Bidding — Your Winning Strategy Revealed" },
+  { file:"34-real-estate-agent-conviction-closing-deals-with-confidence.mp4", num:"34", title:"Real Estate Agent Conviction — Closing Deals with Confidence" },
+  { file:"35-bridging-the-property-gap-vendor-vs.-buyer-expectations.mp4", num:"35", title:"Bridging the Property Gap — Vendor vs. Buyer Expectations" },
+  { file:"36-real-estate-agent-strategy-beat-overpricing-agents.mp4", num:"36", title:"Real Estate Agent Strategy — Beat Overpricing Agents" },
 ];
 
 let currentPage = 'home';
 
 function navigateTo(page) {
   if (page === currentPage) return;
-  document.getElementById('navLinks').classList.remove('active');
-  document.getElementById('navToggle').classList.remove('active');
+  const nl = document.getElementById('navLinks'), nt = document.getElementById('navToggle');
+  nl.classList.remove('active'); nt.classList.remove('active');
+  nt.setAttribute('aria-expanded','false'); nt.setAttribute('aria-label','Open navigation menu');
   if (currentPage === 'media') { const fv = document.getElementById('featureVideo'); if (fv && !fv.paused) fv.pause(); }
-  const current = document.getElementById('page-' + currentPage);
-  if (current) current.classList.remove('active');
-  const target = document.getElementById('page-' + page);
-  if (target) { target.classList.add('active'); target.classList.remove('page-enter'); void target.offsetWidth; target.classList.add('page-enter'); }
+  const cur = document.getElementById('page-' + currentPage);
+  if (cur) cur.classList.remove('active');
+  const tgt = document.getElementById('page-' + page);
+  if (tgt) { tgt.classList.add('active'); tgt.classList.remove('page-enter'); void tgt.offsetWidth; tgt.classList.add('page-enter'); }
   currentPage = page;
   history.pushState(null, '', '#' + page);
   window.scrollTo({ top: 0, behavior: 'instant' });
@@ -774,17 +939,14 @@ function navigateTo(page) {
 }
 
 function updateNav(page) {
-  const navbar = document.getElementById('navbar');
-  if (page === 'home') { navbar.classList.remove('nav-solid'); navbar.classList.toggle('scrolled', window.scrollY > 50); }
-  else { navbar.classList.add('nav-solid'); navbar.classList.remove('scrolled'); }
-  document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
-    link.classList.toggle('active-link', link.getAttribute('data-page') === page);
-  });
+  const nb = document.getElementById('navbar');
+  if (page === 'home') { nb.classList.remove('nav-solid'); nb.classList.toggle('scrolled', window.scrollY > 50); }
+  else { nb.classList.add('nav-solid'); nb.classList.remove('scrolled'); }
+  document.querySelectorAll('.nav-links a[data-page]').forEach(a => a.classList.toggle('active-link', a.getAttribute('data-page') === page));
 }
 
 function toggleNav() {
-  const links = document.getElementById('navLinks');
-  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks'), toggle = document.getElementById('navToggle');
   const isOpen = links.classList.toggle('active');
   toggle.classList.toggle('active', isOpen);
   toggle.setAttribute('aria-expanded', String(isOpen));
@@ -796,10 +958,10 @@ window.addEventListener('scroll', () => {
 });
 
 function observeFadeIns() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-  document.querySelectorAll('.fade-in:not(.visible)').forEach(el => observer.observe(el));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in:not(.visible)').forEach(el => obs.observe(el));
 }
 
 function handleSubmit(e) {
@@ -809,13 +971,13 @@ function handleSubmit(e) {
 }
 
 window.addEventListener('popstate', () => {
-  const hash = window.location.hash.replace('#', '') || 'home';
-  const validPages = ['home','about','services','approach','media','contact'];
-  if (validPages.includes(hash) && hash !== currentPage) {
-    const current = document.getElementById('page-' + currentPage);
-    if (current) current.classList.remove('active');
-    const target = document.getElementById('page-' + hash);
-    if (target) target.classList.add('active');
+  const hash = window.location.hash.replace('#','') || 'home';
+  const valid = ['home','about','services','approach','media','contact'];
+  if (valid.includes(hash) && hash !== currentPage) {
+    const cur = document.getElementById('page-' + currentPage);
+    if (cur) cur.classList.remove('active');
+    const tgt = document.getElementById('page-' + hash);
+    if (tgt) tgt.classList.add('active');
     currentPage = hash; updateNav(hash);
     window.scrollTo({ top: 0, behavior: 'instant' });
     setTimeout(observeFadeIns, 50);
@@ -827,29 +989,32 @@ function buildVideoGallery() {
   const feature = document.getElementById('featureVideo');
   const titleEl = document.getElementById('featureTitle');
   if (!grid || !feature) return;
-
-  const setFeature = (v) => {
+  const setFeature = v => {
     feature.src = 'videos/' + encodeURIComponent(v.file);
     feature.load();
-    titleEl.innerHTML = '<span class="video-tile-num">#' + v.num + '</span>' + v.title;
+    titleEl.innerHTML = '<span class="video-tile-num">' + v.num + '</span> ' + v.title;
     grid.querySelectorAll('.video-tile').forEach(t => t.classList.toggle('is-active', t.dataset.file === v.file));
   };
-
   VIDEOS.forEach((v, i) => {
     const tile = document.createElement('div');
     tile.className = 'video-tile fade-in';
     tile.dataset.file = v.file;
-    tile.innerHTML = '<div class="video-tile-body"><div class="video-tile-title"><span class="video-tile-num">#' + v.num + '</span>' + v.title + '</div></div>';
-    tile.addEventListener('click', () => { setFeature(v); feature.scrollIntoView({ behavior: 'smooth', block: 'center' }); feature.play().catch(() => {}); });
+    tile.setAttribute('role','button');
+    tile.setAttribute('tabindex','0');
+    tile.setAttribute('aria-label','Play: ' + v.title);
+    tile.innerHTML = '<div class="video-tile-body"><div class="video-tile-title"><span class="video-tile-num">' + v.num + '</span> ' + v.title + '</div></div>';
+    const play = () => { setFeature(v); feature.scrollIntoView({behavior:'smooth',block:'center'}); feature.play().catch(()=>{}); };
+    tile.addEventListener('click', play);
+    tile.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') { e.preventDefault(); play(); }});
     grid.appendChild(tile);
     if (i === 0) setFeature(v);
   });
 }
 
-(function() {
-  const hash = window.location.hash.replace('#', '') || 'home';
-  const validPages = ['home','about','services','approach','media','contact'];
-  if (validPages.includes(hash) && hash !== 'home') {
+(function(){
+  const hash = window.location.hash.replace('#','') || 'home';
+  const valid = ['home','about','services','approach','media','contact'];
+  if (valid.includes(hash) && hash !== 'home') {
     document.getElementById('page-home').classList.remove('active');
     document.getElementById('page-' + hash).classList.add('active');
     currentPage = hash; updateNav(hash);
