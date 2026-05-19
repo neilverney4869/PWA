@@ -197,27 +197,24 @@ p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body
    Heavy left overlay preserves text contrast
 ═══════════════════════════════════════════════ */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:#0a1020;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background-image:url('img_canberra-balloon-festival.jpg');background-size:cover;background-position:center 35%;background-attachment:fixed;}
-/* Subtle directional overlay — just enough for text legibility, image stays vivid */
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,rgba(5,8,18,.68) 0%,rgba(5,8,18,.38) 50%,rgba(5,8,18,.22) 100%);}
-.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:100%;min-height:100vh;}
-.hero-text{padding-top:0;max-width:900px;width:100%;display:flex;flex-direction:column;align-items:center;}
+.hero-bg{position:absolute;inset:0;background-image:url('img_canberra-balloon-festival.jpg');background-size:cover;background-position:center 38%;}
+/* Directional overlay — darker left (text area), lighter right (circle area) */
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(108deg,rgba(5,8,18,.78) 0%,rgba(5,8,18,.52) 45%,rgba(5,8,18,.32) 75%,rgba(5,8,18,.45) 100%);}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center;width:100%;}
+.hero-text{padding-top:96px;}
 
 /* Hero text: all on dark overlay */
 /* Eyebrow: mauve-lt on overlay = 7.26:1 ✓ */
 /* H1 white = 18.93:1 ✓ */
 /* Em italic: mauve-lt = 7.26:1 ✓ */
 /* Intro: cream = 16.32:1 ✓ */
-.hero h1{color:#ffffff;margin-bottom:1.4rem;line-height:1.06;font-size:clamp(3rem,6.5vw,5.5rem);}
+.hero h1{color:#ffffff;margin-bottom:1.4rem;line-height:1.06;}
 .hero h1 em{font-style:italic;color:var(--mauve-lt);-webkit-text-fill-color:var(--mauve-lt);}
-.hero-intro{color:var(--cream);font-size:1.1rem;line-height:1.88;margin-bottom:2.6rem;max-width:620px;font-weight:300;}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;}
-/* Hide circle card — full image layout */
-.hero-circle-wrap{display:none!important;}
+.hero-intro{color:var(--cream);font-size:1.05rem;line-height:1.88;margin-bottom:2.6rem;max-width:510px;font-weight:300;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
 
 /* Stats: gold on overlay = 11.19:1 ✓ */
-.hero .eyebrow{justify-content:center;}
-.hero-stats{margin-top:3.8rem;display:flex;gap:3rem;position:relative;z-index:2;justify-content:center;}
+.hero-stats{margin-top:3.8rem;display:flex;gap:3rem;position:relative;z-index:2;}
 .stat-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:600;color:var(--gold);line-height:1;}
 /* #bbbbbb on overlay = well above 4.5:1 ✓ */
 .stat-lbl{font-family:'Jost',sans-serif;font-size:.65rem;color:#bbbbbb;text-transform:uppercase;letter-spacing:.2em;margin-top:.2rem;font-weight:500;}
@@ -279,7 +276,7 @@ p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body
    Mauve overlay so brand colour is dominant
 ═══════════════════════════════════════════════ */
 .about-visual{position:relative;min-height:46vh;overflow:hidden;}
-.about-vis-bg{position:absolute;inset:0;background-image:url('IMG_Canberra-Balloon-Festival2.jpg');background-size:cover;background-position:center 48%;}
+.about-vis-bg{position:absolute;inset:0;background-image:url('img_canberra-balloon-festival.jpg');background-size:cover;background-position:center 48%;}
 /* Mauve-over overlay — brand colour dominant, still allows white text */
 .about-vis-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(91,52,128,.88) 0%,rgba(12,26,53,.82) 100%);}
 .about-vis-inner{position:relative;z-index:2;padding:4.5rem 0 4rem;}
@@ -512,7 +509,7 @@ p{font-family:'Jost',sans-serif;font-size:1rem;line-height:1.82;color:var(--body
 <nav class="nav" id="navbar" aria-label="Main navigation">
   <div class="nav-inner">
     <a class="nav-logo" onclick="navigateTo('home')" role="button" tabindex="0" aria-label="Walker Auctions — home" onkeydown="if(event.key==='Enter')navigateTo('home')">
-      <img src="/images/pwa.jpg" alt="Walker Auctions logo — house with gavel" onerror="this.style.display='none'">
+      <img src="pwa.jpg" alt="Walker Auctions logo — house with gavel" onerror="this.style.display='none'">
       <span class="nav-logo-text">Walker <span>Auctions</span></span>
     </a>
     <div class="nav-links" id="navLinks" role="menubar">
